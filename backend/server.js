@@ -10,7 +10,7 @@ const dataBase=mysql.createConnection({
     host:"localhost",
     user:"root",
     password:"",
-    database:"SignUp"
+    database:"signupkadas"
 })
 
 

@@ -1,0 +1,77 @@
+.heroWrapper{
+    width: 1011px;
+    height: 722px;
+    margin: 50px auto;
+       
+}
+.heroOne{
+    
+    height: 375px;
+   margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+}
+.heroText{
+   width: 70%;
+   margin: auto;
+   font-size: 50px;
+ 
+}
+.heroText span{
+    color: #360AFF;
+}
+
+.form{
+    margin-left: 170px;
+    margin-top: 40px;
+}
+.form input {
+    width: 315px;
+    height: 40px;
+    border-color: #cececee0;
+    background-image: url('../../Assets/microphone.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center; 
+    padding-right: 40px; 
+    position: relative;
+  }
+  .form input::placeholder {
+    padding-left: 30px; 
+    padding-right: 30px; 
+    text-align: center; 
+  }  
+  .search {
+    position: absolute; 
+    padding-top: 10px;
+    
+    left: 345px; 
+    width: 20px; 
+    height: 20px; 
+    z-index: 1; 
+  }
+  
+.form button{
+    width: 166px;
+    height: 45px;
+    background-color: #360AFF;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin-left: 30px;
+}
+.heroTwo{
+    margin-top: 0px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 8px;
+}
+.heroTwo div{
+    width: 308px;
+    height: 307px;
+    border-radius: 24px;
+    
+}
