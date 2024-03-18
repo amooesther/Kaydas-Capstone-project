@@ -1,0 +1,83 @@
+/* 
+
+.topDiscountWrapper {
+    width: 1248px;
+    height: 749px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .topOne {
+    display: flex;
+    padding: 0;
+  }
+  
+  .topOne Button {
+    width: 166px;
+    height: 45px;
+    background-color: #360AFF;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    margin-left: 30px;
+  }
+  
+ 
+
+.imgWrap {
+    display: flex;
+    justify-content: space-between; 
+    
+   
+    padding: 20px;
+  }
+  .ImgWrapper{
+    width: 403px;
+    height: 607px;
+    border: 0.5px solid #805B5B;
+    
+
+  }
+  .img {
+    width: 300px; 
+    height: 310px; 
+    border: 2px solid #805B5B;
+    margin: 0;
+  }
+  
+  .img img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .img span {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #805B5B;
+  }
+   */
+
+
+
+   .categoryItem{
+    display: flex;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--dark-color);
+    font-family: var(--font-primary);
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.categoryItem:hover{
+    background-color: var(--color-four);
+    font-weight: 500;
+}
