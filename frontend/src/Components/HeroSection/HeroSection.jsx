@@ -7,25 +7,27 @@ import './HeroSection.css'
 const HeroSection = () => {
   return (
     <div className='heroWrapper'>
-        <div className='heroOne'>
-            <h1 className='heroText'>Enjoy affordable doorstep delivery of your <span>fresh frozen proteins!</span></h1>
-            <form action="" className='form'>
-            <img src={search} alt=""  className='search'/>
-                <input type="text" placeholder='what are you searching for' />
-              
-                
-                <button>Search</button>
-            </form>
-            </div>
-            <div className='heroTwo'>
-            <div><img src={heroImg1} alt="" /></div>
-            <div><img src={heroImg2} alt="" /></div>
-            <div><img src={heroImg3} alt="" /></div>
-            
-            </div>
-            
-        
+    <div className='heroOne'>
+      <h1 className='heroText'>
+        Enjoy affordable doorstep delivery of your <span>fresh frozen proteins!</span>
+      </h1>
+      <div className='inputWrapper'>
+       
+          <div className='searchWrapper'>
+            <img src={search} alt='' className='searchIcon' />
+            <input type='text' placeholder='What are you searching for' className='searchInput' />
+          </div>
+          <button type='submit' className='searchButton'>Search</button>
+       
+      </div>
     </div>
+    <div className='heroTwo'>
+      <div><img src={heroImg1} alt='' /></div>
+      <div><img src={heroImg2} alt='' /></div>
+      <div><img src={heroImg3} alt='' /></div>
+    </div>
+  </div>
+  
   )
 }
 

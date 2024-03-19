@@ -1,0 +1,44 @@
+.footerWrapper{
+    width: 100vw;
+    height: 350px;
+    color: white;
+    background: #360AFF;
+    display: flex;
+}
+.footerWrapper h2{
+    font-size: 20px;
+    font-weight: 500;
+    }
+
+.footerOne{
+width: 350px;
+padding-top: 50px;
+margin-left: 30px;
+margin-right: 150px;
+
+}
+.socials{
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    padding-bottom: 15px;
+ 
+}
+.socials img{
+    padding: 5px;
+}
+
+
+.downloadOption img{
+    padding: 2px;
+}
+.footerTwo{
+    width: 319px;
+    padding-top: 50px;
+    margin-left: 30px;
+     
+}
+.footerTwo p{
+    font-size: 12px;
+    font-weight: 400;
+}

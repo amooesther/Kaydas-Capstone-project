@@ -13,18 +13,22 @@ const NavBar = () => {
     
 </div>
 <ul className='navMenu'>
-    <li>Home</li>
-    <li>About Us</li>
-    <li>Contact Us</li>
-    <li>Shop</li>
-    <li>subscription</li>
+    <li onClick={()=>{setMenu('Home')}}><Link style={{textDecoration:'none'}} to='./' >Home</Link></li>
+    <li onClick={()=>{setMenu('aboutUs')}}><Link style={{textDecoration:'none'}} to='./aboutUs' >About Us</Link></li>
+    <li onClick={()=>{setMenu('contactUS')}}><Link style={{textDecoration:'none'}} to='./contactUS' >Contact US</Link></li>
+    <li onClick={()=>{setMenu('shop')}}><Link style={{textDecoration:'none'}} to='./shop' >Shop</Link></li>
+    <li onClick={()=>{setMenu('subscription')}}><Link style={{textDecoration:'none'}} to='./subscription' >Subsription</Link></li>
 </ul>
 <div className='newLoginCart'>
-   <button>LOGIN</button> 
-   <img src={heart} alt="cart" />
-   <div className='cartCount'>0</div>
-    <img src={cart} alt="cart" />
-    <div className='cartCount'>0</div>
+<img src={heart} alt="cart" />
+<div className='cartCount'>0</div>
+<Link to='./cart'><img src={cart} alt="cart" /></Link>
+<div className='cartCount'>0</div>
+<Link to='./Login'><button>Login</button></Link> 
+
+  
+   
+  
 </div>
     </div>
   )
