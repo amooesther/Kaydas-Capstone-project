@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './Login.css';
 import { Link } from 'react-router-dom';
 import Validation from '../LoginValidation';
+import NavBar from '../NavBar/NavBar'
+import loginImg1 from '../../Assets/loginImg1.png'
+import Footer from '../footer/Footer';
+
 
 const Login = () => {
   const [value, setValue] = useState({ email: "", password: "" });
@@ -23,9 +27,18 @@ const Login = () => {
   };
 
   return (
+    <div>
+      <NavBar/>
+      <div className='loginText'>
+        <h1>Enjoy affordable doorstep delivery of your <span>fresh frozen proteins!</span> </h1>
+      </div>
     <div className='formContainer'>
+      
       <div className='loginPage'>
-        <h2>Sign-In</h2>
+        <div className='loginImg'>
+          <img src={loginImg1} alt="" />
+       
+        </div>
         <form onSubmit={handleSubmit} className='form'>
           <div className=''>
             <label htmlFor="email">Email </label><br />
@@ -38,10 +51,12 @@ const Login = () => {
             {errors.password && <span className="error">{errors.password}</span>}
           </div>
           <button type='submit' className='btn'>Login</button>
-          <p>You agree to our terms and conditions</p>
-          <Link to='/SignUp'><button className='btn'>Create Account</button></Link>
+          
         </form>
       </div>
+      
+    </div>
+    <Footer/>
     </div>
   );
 };

@@ -3,13 +3,20 @@
     height: 350px;
     color: white;
     background: #360AFF;
-    display: flex;
+    
 }
 .footerWrapper h2{
     font-size: 20px;
     font-weight: 500;
     }
-
+.footerWrap{
+    width: 1302px;
+    height: 200px;
+    display: flex;
+    padding-top: 5px;
+    padding-left: 15px;
+   
+}
 .footerOne{
 width: 350px;
 padding-top: 50px;
@@ -36,9 +43,19 @@ margin-right: 150px;
     width: 319px;
     padding-top: 50px;
     margin-left: 30px;
+
      
 }
 .footerTwo p{
     font-size: 12px;
     font-weight: 400;
+}
+hr{
+    margin-top: 100px;
+    border-color:#b5b6b8
+}
+.copyWrite{
+    font-size: 10px;
+    font-weight: 300;
+    padding-left: 80px ;
 }

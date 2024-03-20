@@ -14,7 +14,7 @@ const Services = () => {
            <div className='serviceUp'> 
             <h1>Our services</h1>
             <p>Kaydas cold room prioritizes customer's satisfaction over every other things</p>
-         <button>Learn more</button></div>
+         <button className='btnServices'>Learn more</button></div>
          </div>
          <div className='serviceTwo'>
             <div><img src={servicesImg1} alt="" />

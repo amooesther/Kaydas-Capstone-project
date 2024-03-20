@@ -8,6 +8,7 @@ import "./Footer.css"
 const Footer = () => {
   return (
     <div className='footerWrapper'>
+        <div className='footerWrap'>
         <div className='footerOne'>
             <h2>Kaydas Enterprise</h2>
             <div className='socials'>
@@ -53,6 +54,9 @@ const Footer = () => {
             <p>Terms and conditions</p>
             
         </div>
+        </div>
+        <hr />
+        <span className='copyWrite'>&copy; 2024 Kaydas cold room. All rights reserved.</span>
     </div>
   )
 }

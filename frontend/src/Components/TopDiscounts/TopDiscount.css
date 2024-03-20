@@ -1,5 +1,25 @@
-.discountWrapper{
-width: 90vw;
-background-color: aqua;
 
+.discounts{
+    display: flex;
+}
+.discountOne{
+    width: 402Px;
+    height: 607px;
+    border: 1px solid #805B5B;
+    border-radius: 48px;
+}
+.discountTwo{
+    width: 346px;
+    height: 357px;
+    border: 2px solid #805B5B;
+}
+.discountThree{
+    display: flex;
+}
+
+.discountThree span{
+    display: block;
+}
+.discountThree span:last-child{
+    color: #9080D9;
 }

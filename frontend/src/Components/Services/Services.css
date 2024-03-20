@@ -16,7 +16,18 @@
    
   }
   
-
+.btnServices{
+    padding: 10px 20px;
+    width: 166px;
+    font-weight: 600;
+    color: #360AFF;
+    border: 1px solid #360AFF;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: transparent;
+}
 
 .serviceTwo {
     display: grid;
@@ -34,6 +45,7 @@
     border: 1px solid #360AFF;
     border-radius: 20px;
     padding: 20px;
+   
   }
   
   .serviceTwo img {
