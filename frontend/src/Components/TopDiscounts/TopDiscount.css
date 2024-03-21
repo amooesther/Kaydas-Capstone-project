@@ -1,17 +1,47 @@
-
+.discountTop{
+    padding-left: 160px;
+    margin-bottom: 40px;
+}
+.discountTop h2{
+    font-size: 35px;
+    font-weight: 600;
+}
+.discountTop p{
+    font-size: 12px;
+    font-weight: 500;
+}
+.discountTopOne{
+    display: flex;
+    gap: 20px;
+}
+.discountTop button{
+    width: 150px;
+    height: 40px;
+    background-color: #360AFF;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    
+}
 .discounts{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 .discountOne{
-    width: 402Px;
-    height: 607px;
+    width: 300Px;
+    height: 500px;
     border: 1px solid #805B5B;
     border-radius: 48px;
 }
 .discountTwo{
-    width: 346px;
-    height: 357px;
-    border: 2px solid #805B5B;
+    width: 90%;
+    margin: 50px auto;
+   
 }
 .discountThree{
     display: flex;
@@ -19,7 +49,16 @@
 
 .discountThree span{
     display: block;
+    padding: 10px;
+    margin-left: 10px;
 }
 .discountThree span:last-child{
     color: #9080D9;
+}
+.discountThree span:first-child{
+    font-size: 10px;
+    font-weight: 600;
+}
+.topDiscountFour{
+    margin-left: 125px;
 }

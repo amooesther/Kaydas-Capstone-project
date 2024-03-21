@@ -18,11 +18,13 @@ const TopDiscount = ({ discounts = [] }) => {
     //     </li>
     //   ))}
     // </ul>
-<div>
+<div  >
+  <div className='discountTop'>
   <h2>Top Discounts</h2>
-  <div>
+  <div className='discountTopOne'>
     <p>Free Delivery on orders above N300,000</p>
     <button>Shop Now</button>
+    </div>
   </div>
   <div className='discounts'>
     <div className='discountOne'>
@@ -38,7 +40,7 @@ const TopDiscount = ({ discounts = [] }) => {
             <span>N6000</span>
             <span>N4500</span>
           </div>
-          <div>
+          <div className='topDiscountFour'>
             <img src={topDiscountImg4} alt="" />
           </div>
         </div>
@@ -47,38 +49,40 @@ const TopDiscount = ({ discounts = [] }) => {
     <div className='discountOne'>
       <div className='discountTwo'>
         <div>
-          <img src={topDiscountImg2} alt="" />
+          <img src={topDiscountImg3} alt="" />
         </div>
-        <div className='discountThree'>
+        
+      </div>
+      <div className='discountThree'>
           <div>
             <span>Gizzards</span>
             <span>N6000</span>
             <span>N4500</span>
           </div>
-          <div>
+          <div className='topDiscountFour'>
             <img src={topDiscountImg4} alt="" />
           </div>
         </div>
-      </div>
     </div>
     </div>
     <div>
     <div className='discountOne'>
       <div className='discountTwo'>
         <div>
-          <img src={topDiscountImg2} alt="" />
+          <img src={topDiscountImg1} alt="" />
         </div>
-        <div className='discountThree'>
+        
+      </div>
+      <div className='discountThree'>
           <div>
             <span>Gizzards</span>
             <span>N6000</span>
             <span>N4500</span>
           </div>
-          <div>
+          <div className='topDiscountFour'>
             <img src={topDiscountImg4} alt="" />
           </div>
         </div>
-      </div>
     </div>
     </div>
   </div>
