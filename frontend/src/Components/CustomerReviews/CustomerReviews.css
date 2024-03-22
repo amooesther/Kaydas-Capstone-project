@@ -1,4 +1,4 @@
-.customerWrapper h1{
+.customer h1{
     background-color: #360AFF;
     color: white;
     font-weight: 600;
@@ -27,7 +27,86 @@
     
 }
 
+
 hr{
     margin-top: 20px;
     border:1px solid #360AFF;
 }
+.reviews{
+    display: flex;
+}
+
+.firstReview{
+    display: flex;
+    width: 900px;
+    height: 300px;
+    gap: 44px;
+    border: 1px solid #e9e6ff ;
+    justify-content: center;
+    align-items: center;
+}
+.reviewText{
+    width: 290px;
+}
+.reviewText p{
+    color: #360AFF;
+}
+.reviewText span{ 
+    color: #360AFF;
+    margin-left: 190px;
+}
+.reviewName{
+    width: 83px;
+    height: 121px;
+    color: #360AFF;
+    font-weight: 700;
+}
+
+.aboutUS h1{
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+.aboutOne{
+    display: flex;
+    gap: 350px;
+    justify-content: center;
+    align-items: center;
+}
+.about{
+    width: 442px;
+}
+.about h2{
+    color: #360AFF;
+}
+.aboutTwo{
+    display: flex;
+    gap: 350px;
+    justify-content: center;
+    align-items: center
+}
+.formWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe{
+    width: 400px;
+}
+.form {
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   color: black;
+   
+  }
+  
+  input[type="email"] {
+    padding: 10px;
+    border: 1px solid  #b3a9f9 ;
+    border-radius: 8px;
+    width: 200px;
+    flex: 1;
+  }
+  
+  
