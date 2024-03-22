@@ -1,0 +1,29 @@
+.btn{
+    width: 150px;
+    height: 40px;
+    background-color: #360AFF;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+   
+}
+
+
+.btn[data-variant="primary"]{
+    background-color: #360AFF;
+    color: white;
+    
+}
+.btn[data-variant="secondary"]{
+    background: var(--white-color);
+    color: var(--dark-color);
+}
+.btn[data-size="medium"]{
+    padding: 7px 0px;
+}
+.btn[data-size="large"]{
+    padding: 10.5px 0px;
+}

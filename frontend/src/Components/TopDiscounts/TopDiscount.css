@@ -38,6 +38,11 @@
     border: 1px solid #805B5B;
     border-radius: 48px;
 }
+.image{
+    width: 250px;
+    height: 230px;
+    border-bottom: 5px solid #805B5B;
+}
 .discountTwo{
     width: 90%;
     margin: 50px auto;
