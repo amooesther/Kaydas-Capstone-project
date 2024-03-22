@@ -20,8 +20,9 @@
     
 }
 .btn[data-variant="secondary"]{
-    background: var(--white-color);
-    color: var(--dark-color);
+    background-color: transparent;
+    color: #360AFF;
+    border:  1px solid #360AFF;
 }
 .btn[data-size="medium"]{
     padding: 7px 0px;

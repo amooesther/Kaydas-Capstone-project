@@ -1,0 +1,33 @@
+.customerWrapper h1{
+    background-color: #360AFF;
+    color: white;
+    font-weight: 600;
+    font: 35px;
+    text-align: center; 
+  
+}
+.customer{
+    width: 100vw;
+    height: 85px;
+    
+
+}
+.customer h1{
+    font-size:35px ;
+    font-weight: 600;
+    
+    
+}
+
+.overallRatings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 405px;
+    
+}
+
+hr{
+    margin-top: 20px;
+    border:1px solid #360AFF;
+}

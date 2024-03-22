@@ -5,6 +5,7 @@ import Services from '../../Components/Services/Services'
 import TopDiscount from '../../Components/TopDiscounts/TopDiscount'
 import Footer from '../../Components/footer/Footer'
 import BestSellers from '../../Components/BestSellers/BestSellers'
+import CustomerReviews from '../../Components/CustomerReviews/CustomerReviews'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
 <Services/>
 <TopDiscount/>
 <BestSellers/>
+<CustomerReviews/>
 <Footer/>
       
     </div>

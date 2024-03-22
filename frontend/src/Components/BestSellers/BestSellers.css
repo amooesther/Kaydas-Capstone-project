@@ -1,3 +1,6 @@
+.wrap{
+    margin-bottom: 50px;
+}
 .bestTop{
    margin-left: 150px;
    margin-top: 40px;
@@ -47,3 +50,22 @@
 .imgDown span:last-child{
    font-size: 12px;
 }
+.chevrons {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 170px;
+    margin-top: 20px;
+  }
+  
+  .chevron-left,
+  .chevron-right {
+    margin-left: 0px; 
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .chevron-right {
+    background-color: #b3a2a2;
+    color: white;
+    margin-left: 5px;
+  }

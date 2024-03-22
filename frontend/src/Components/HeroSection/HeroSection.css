@@ -31,10 +31,11 @@
    margin: auto;
    padding-top: 20px;
 }
-.searchInput {
+.searchWrapper input {
     width: 300px;
     height: 40px;
-    border-color: #cececee0;
+    border-color: #360AFF;
+    border-radius: 8px;
     background-image: url('../../Assets/microphone.png');
     background-repeat: no-repeat;
     background-position: right 10px center; 
@@ -48,6 +49,8 @@
     padding-left: 30px; 
     padding-right: 30px; 
     text-align: center; 
+    font-size: 10px;
+    font-weight: 300;
   }  
   .search {
     position: absolute; 
