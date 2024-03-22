@@ -14,7 +14,37 @@ const BestSellers = () => {
   <div className='image'>
     <div>image</div> 
   </div>
-  <div>
+  <div className='imgDown'>
+    <div>
+      <span>Drumsticks</span>
+      <span>NGN4,500</span>
+      <span>⭐⭐⭐⭐⭐40+ Reviews</span>
+    </div>
+    <div>
+      <img src={topDiscountImg4} alt="" />
+    </div>
+  </div>
+</div>
+<div className='bestImg'>
+  <div className='image'>
+    <div>image</div> 
+  </div>
+  <div className='imgDown'>
+    <div>
+      <span>Drumsticks</span>
+      <span>NGN4,500</span>
+      <span>⭐⭐⭐⭐⭐40+ Reviews</span>
+    </div>
+    <div>
+      <img src={topDiscountImg4} alt="" />
+    </div>
+  </div>
+</div>
+<div className='bestImg'>
+  <div className='image'>
+    <div>image</div> 
+  </div>
+  <div className='imgDown'>
     <div>
       <span>Drumsticks</span>
       <span>NGN4,500</span>

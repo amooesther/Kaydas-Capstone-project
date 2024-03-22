@@ -1,3 +1,17 @@
+.bestTop{
+   margin-left: 150px;
+   margin-top: 40px;
+}
+.bestTop h2{
+    font-size: 35px;
+    font-weight: 600;
+}
+.bestWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 .bestImg{
     width: 300Px;
     height: 500px;
@@ -5,5 +19,31 @@
     border-radius: 48px;
 }
 .image{
-    
+    width: 250px;
+    height: 230px;
+    border: 5px solid #805B5B;
+    margin: 17px auto;
+}
+.imgDown{
+    display: flex;
+    gap: 40px;
+    margin-left: 20px;
+
+}
+
+.imgDown span{
+    display: block;
+    padding: 1px;
+}
+
+
+.imgDown span:first-child{
+    font-size: 10px;
+    font-weight: 600;
+ }
+.imgDown span:nth-child(2){
+    color: #360AFF;
+ }
+.imgDown span:last-child{
+   font-size: 12px;
 }
