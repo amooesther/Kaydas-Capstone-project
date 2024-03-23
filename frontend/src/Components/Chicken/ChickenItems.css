@@ -1,0 +1,51 @@
+.cartCards h2{
+    color: #360AFF;
+    font-size: 30px;
+
+}
+.itemWrapper{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.itemWrap{
+width: 185px;
+height: 320px;
+border: 0.1px solid #aaa8a8; 
+border-radius: 8px;
+padding: 5px;
+}
+.itemWrap img{
+    padding: 15px;
+    
+}
+.itemOne{
+    display: flex;
+    border: 0.1px solid #aaa8a8; 
+    justify-content: space-between;
+    align-items: center;
+}
+.itemOne div{
+    font-size: 8px;
+    font-weight: 200;
+    color: #121212;
+}
+.itemCard{
+    display: flex;
+    justify-content: space-between;
+   
+    color: #121212;
+    font: 10px;
+    border: 0.1px solid #aaa8a8; 
+}
+.itemCard span{
+    font-size: 8px;
+    font-weight: 300;
+}
+.btnWrapper{
+    display: flex;
+    gap: 12px;
+}
