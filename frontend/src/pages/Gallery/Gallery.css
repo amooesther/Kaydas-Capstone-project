@@ -1,0 +1,11 @@
+.formWrapper{
+    margin: 40px auto;
+    gap: 10px;
+}
+.formWrapper input{
+    width: 450px;
+    height: 40px;
+    border: 0.5px solid #360AFF;
+    border-radius: 8px;
+    margin-right: 25px;
+}

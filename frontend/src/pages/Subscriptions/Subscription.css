@@ -1,0 +1,137 @@
+.subscriptionWrapper {
+    width: 1200px;
+    height: 285px;
+    background-color: #f6f5ff;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    border: 1px solid;
+    
+  }
+  .subscriptionWrapper h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  
+  .sub {
+    display: flex;
+   
+  }
+  
+  .subLeft {
+    display: flex;
+    margin-left: 60px;
+  }
+  
+  .btnWrapper {
+    width: 92px;
+  }
+  
+  .subOne {
+    width: 154px;
+    height: 180px;
+    
+  }
+  
+  .subTwo {
+    border: 1px solid;
+    width: 90px;
+    height: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .subTwo img {
+    position: absolute;
+    left: 2px;
+    top: 4.5px;
+  }
+  
+  .subOne p {
+    font-size: 12px;
+  }
+  
+  .subRight {
+    display: flex;
+    margin-left: 300px;
+    align-items: center; 
+  }
+  
+  .verticalLine {
+    border-left: 1px solid black;
+    height: 185px;
+    margin-left: 100px;
+  }
+  .carouselWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .carouselWrap{
+    width: 280px;
+    height: 550px;
+    padding: 15px;
+    background-color: white;
+    border: 0.5px solid #eeebeb;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .carouselWrap h3{
+   font-size: 28px;
+   font-weight: 400;
+  }
+  .carouselWrap p {
+    font-size: 12px;
+    width: 250px;
+    font-weight: 400;
+   
+   }
+   .carouselWrap  span {
+    font-size: 13px;
+    font-weight: 300;
+    display: block;
+    padding: 5px;
+   
+   
+   }
+   .span {
+    color: #360AFF;
+    font-weight: 600 !important;
+    margin-top: 10px;
+}
+
+
+   .carouselBtnWrapper{
+    display: flex;
+    gap: 15px;
+   
+   }
+   .buttonWrap{
+    width: 84px;
+    height: 29px;
+
+   }
+   .arrowWrapper{
+    margin-top: 20px;
+   }
+   .arrowWrapper p {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+  
+   }
+   .arrowUpBtn{
+    display: flex;
+   gap: 20px;
+   justify-content: center;
+    align-items: center;
+   }

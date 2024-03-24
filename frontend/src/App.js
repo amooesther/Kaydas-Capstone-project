@@ -7,6 +7,7 @@ import Home from './pages/Home/Home';
 import Shop from './pages/Shop/Shop';
 import Subscription from './pages/Subscriptions/Subscription';
 import Login from './Components/Login/Login';
+import Gallery from './pages/Gallery/Gallery.jsx'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/subscription' element={<Subscription />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/gallery' element={<Gallery/>} />
         </Routes>
       </BrowserRouter>
     </div>

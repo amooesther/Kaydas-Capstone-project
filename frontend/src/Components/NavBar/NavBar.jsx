@@ -13,11 +13,11 @@ const NavBar = () => {
     
 </div>
 <ul className='navMenu'>
-    <li onClick={()=>{setMenu('Home')}}><Link style={{textDecoration:'none'}} to='./' >Home</Link></li>
-    <li onClick={()=>{setMenu('aboutUs')}}><Link style={{textDecoration:'none'}} to='./aboutUs' >About Us</Link></li>
-    <li onClick={()=>{setMenu('contactUS')}}><Link style={{textDecoration:'none'}} to='./contactUS' >Contact US</Link></li>
+    <li onClick={()=>{setMenu('Home')}}><Link style={{textDecoration:'none'}} to='/' >Home</Link></li>
+    <li onClick={()=>{setMenu('aboutUs')}}><Link style={{textDecoration:'none'}} to='/aboutUs' >About Us</Link></li>
+    <li onClick={()=>{setMenu('contactUS')}}><Link style={{textDecoration:'none'}} to='/contactUS' >Contact US</Link></li>
     <li onClick={()=>{setMenu('shop')}}><Link style={{textDecoration:'none'}} to='./shop' >Shop</Link></li>
-    <li onClick={()=>{setMenu('subscription')}}><Link style={{textDecoration:'none'}} to='./subscription' >Subsription</Link></li>
+    <li onClick={()=>{setMenu('subscription')}}><Link style={{textDecoration:'none'}} to='/subscription' >Subsription</Link></li>
 </ul>
 <div className='newLoginCart'>
 <img src={heart} alt="cart" />
