@@ -8,6 +8,8 @@ import Shop from './pages/Shop/Shop';
 import Subscription from './pages/Subscriptions/Subscription';
 import Login from './Components/Login/Login';
 import Gallery from './pages/Gallery/Gallery.jsx'
+import ScheduleOrder from './pages/ScheduleOrder/ScheduleOrder.jsx';
+import Order from './pages/OrderHistory/Order.jsx';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
           <Route path='/gallery' element={<Gallery/>} />
+          <Route path='/scheduleOrder' element={<ScheduleOrder/>} />
+          <Route path='/order' element={<Order/>} />
         </Routes>
       </BrowserRouter>
     </div>

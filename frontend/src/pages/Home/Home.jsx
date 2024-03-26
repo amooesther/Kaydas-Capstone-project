@@ -6,6 +6,8 @@ import TopDiscount from '../../Components/TopDiscounts/TopDiscount'
 import Footer from '../../Components/footer/Footer'
 import BestSellers from '../../Components/BestSellers/BestSellers'
 import CustomerReviews from '../../Components/CustomerReviews/CustomerReviews'
+import AboutUs from '../AboutUs/AboutUs'
+import NutritionalTip from '../../Components/NutritionalTip/NutritionalTip'
 
 
 const Home = () => {
@@ -18,6 +20,8 @@ const Home = () => {
 <TopDiscount/>
 <BestSellers/>
 <CustomerReviews/>
+
+<NutritionalTip/>
 <Footer/>
       
     </div>

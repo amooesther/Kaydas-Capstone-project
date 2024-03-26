@@ -61,11 +61,17 @@ hr{
     color: #360AFF;
     font-weight: 700;
 }
-
+.aboutUs{
+    width: 1080px;
+}
 .aboutUS h1{
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 600;
     margin-left: 20px;
+   background-color: #360AFF; 
+   color: white;
+   text-align: center;
+   height: 50px;
 }
 .aboutOne{
     display: flex;
@@ -85,28 +91,3 @@ hr{
     justify-content: center;
     align-items: center
 }
-.formWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.subscribe{
-    width: 400px;
-}
-.form {
-   display: flex;
-   width: 100%;
-   flex-direction: column;
-   color: black;
-   
-  }
-  
-  input[type="email"] {
-    padding: 10px;
-    border: 1px solid  #b3a9f9 ;
-    border-radius: 8px;
-    width: 200px;
-    flex: 1;
-  }
-  
-  

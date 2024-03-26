@@ -6,7 +6,7 @@ import servicesImg3 from'../../Assets/servicesImg3.png'
 import servicesImg4 from'../../Assets/servicesImg4.png'
 import servicesImg5 from'../../Assets/servicesImg5.png'
 import servicesImg6 from'../../Assets/servicesImg6.png'
-
+import { Link } from 'react-router-dom'
 const Services = () => {
   return (
     <div className='serviceWrapper'>
@@ -36,10 +36,11 @@ const Services = () => {
             <div><img src={servicesImg5} alt="" />
             <h3>Referral Program</h3>
             <p>Earn incentives by sharing our platform with friends and family.</p></div>
-            <div><img src={servicesImg6} alt="" />
+         <Link to='/Order'>  <div><img src={servicesImg6} alt="" />
             <h3>Order History</h3>
-            <p>Keep track of all your purchases and sales in one convenient place.</p></div>
+            <p>Keep track of all your purchases and sales in one convenient place.</p></div></Link> 
          </div>
+         
     </div>
   )
 }

@@ -10,9 +10,9 @@ import Footer from '../../Components/footer/Footer.jsx'
 
 const Gallery = () => {
   return (
-    <div>
+    <div className='gallery'>
       <NavBar/>
-      <div className='formWrapper'>
+      <div className='galleryWrapper'>
         <form action="">
           <input type="text" placeholder='Search Kaydas coldroom' />
        <Button>Search</Button>

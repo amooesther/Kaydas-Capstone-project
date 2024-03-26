@@ -29,9 +29,7 @@ const Login = () => {
   return (
     <div>
       <NavBar/>
-      <div className='loginText'>
-        <h1>Enjoy affordable doorstep delivery of your <span>fresh frozen proteins!</span> </h1>
-      </div>
+      
     <div className='formContainer'>
       
       <div className='loginPage'>

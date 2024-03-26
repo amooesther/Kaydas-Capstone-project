@@ -1,0 +1,30 @@
+.aboutUs{
+    width: 1080px;
+}
+.aboutUS h1{
+    font-size: 35px;
+    font-weight: 600;
+    margin-left: 20px;
+   background-color: #360AFF; 
+   color: white;
+   text-align: center;
+   height: 50px;
+}
+.aboutOne{
+    display: flex;
+    gap: 350px;
+    justify-content: center;
+    align-items: center;
+}
+.about{
+    width: 442px;
+}
+.about h2{
+    color: #360AFF;
+}
+.aboutTwo{
+    display: flex;
+    gap: 350px;
+    justify-content: center;
+    align-items: center
+}

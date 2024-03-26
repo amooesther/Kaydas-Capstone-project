@@ -1,0 +1,26 @@
+
+.formWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe{
+    width: 400px;
+}
+.form {
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   color: black;
+   
+  }
+  
+   .formSubscribe input {
+    padding: 10px;
+    border: 1px solid  #b3a9f9 ;
+    border-radius: 8px;
+    width: 200px;
+    flex: 1;
+  }
+  
+  

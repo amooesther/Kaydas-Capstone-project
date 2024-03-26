@@ -31,7 +31,7 @@ const Subscription = () => {
     return () => clearInterval(autoplayInterval);
   }, [currentSlide, isAutoplaying]);
 
-  const totalSlides = 4; // Move this outside of the functions for consistency
+  const totalSlides = 4;
 
   const goToNextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
@@ -82,7 +82,7 @@ const Subscription = () => {
    <span><img src={truck} alt="" /> Bulk Delivery</span>
    <span className='span'>From 300kg per product Per week</span>
    <div className='carouselBtnWrapper'>
-    <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div>
+   <Link to='/scheduleOrder'> <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>
     <div className='buttonWrap'> <Button variant='tertiaryOne' size='small'>Learn More</Button></div>
    </div>
       </div>
@@ -97,7 +97,7 @@ const Subscription = () => {
    <span><img src={truck} alt="" /> Bulk Delivery</span>
    <span className='span'>From 500kg  Per  month</span>
    <div className='carouselBtnWrapper'>
-    <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div>
+  <Link to='/scheduleOrder'>  <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>
     <div className='buttonWrap'> <Button variant='tertiaryOne' size='small'>Learn More</Button></div>
    </div>
       </div>
@@ -111,7 +111,7 @@ const Subscription = () => {
    <span><img src={truck} alt="" />4,8 or unlimited days by month</span>
    <span className='span'>From 200kg- 5tonnes and above</span>
    <div className='carouselBtnWrapper'>
-    <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div>
+  <Link to='/scheduleOrder'><div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>  
     <div className='buttonWrap'> <Button variant='tertiaryOne' size='small'>Learn More</Button></div>
    </div>
       </div>
@@ -125,7 +125,7 @@ const Subscription = () => {
    <span><img src={truck} alt="" /> Bulk Delivery</span>
    <span className='span'>From 300kg per product Per week</span>
    <div className='carouselBtnWrapper'>
-    <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div>
+ <Link to='/scheduleOrder'> <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>  
     <div className='buttonWrap'> <Button variant='tertiaryOne' size='small'>Learn More</Button></div>
    </div>
       </div>

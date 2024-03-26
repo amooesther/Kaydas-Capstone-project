@@ -56,7 +56,6 @@ const CustomerReviews = () => {
             </div>
         </div>
       </div>
-
       <div className='aboutUS'>
         <h1>About us</h1>
      <div className='aboutOne'>
@@ -91,22 +90,8 @@ const CustomerReviews = () => {
         </div>
       </div>
       </div>
-
-      <div className='formWrapper'>
      
-        <h1 className='subscribe'>Subscribe to Our Nutritional Tips</h1>
       
-        <form action=""className='formSubscribe'>
-          <label htmlFor="">Enter your Email here</label>
-          <div className='subInput'>
-          <input type="email" />
-           <Button>Search</Button>
-          
-          </div>
-          
-        </form>
-     
-    </div>
     </div>
 
     
