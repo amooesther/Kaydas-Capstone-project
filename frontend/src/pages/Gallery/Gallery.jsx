@@ -8,6 +8,7 @@ import ChickenItems from '../../Components/Chicken/ChickenItems.jsx'
 import ChickenWhole from '../../Components/ChickenWhole/ChickenWhole.jsx'
 import Footer from '../../Components/footer/Footer.jsx'
 
+
 const Gallery = () => {
   return (
     <div className='gallery'>

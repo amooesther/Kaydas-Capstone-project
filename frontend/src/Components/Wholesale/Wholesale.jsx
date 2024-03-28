@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import Button from '../Button/Button.jsx';
 import './Wholesale.css'
 import itemImg1 from '../../Assets/ItemImg1.png';
+import { Link } from 'react-router-dom';
+
 
 const Wholesale = () => {
+  const navigate = useNavigate(); 
     const [savedItems, setSavedItems] = useState([
         {
           id: 1,
@@ -39,7 +44,7 @@ const Wholesale = () => {
                 </div>
               </div>
               <div className='btnWrapper'>
-                <div><Button variant='tertiaryOne' size='small'>View details</Button></div>
+              <div><Button variant='tertiaryOne' size='small' onClick={() => navigate('./gallery/description')}>View details</Button></div>
                 <div><Button variant='tertiaryTwo' size='small'>Add to cart</Button></div>
               </div>
             </div>

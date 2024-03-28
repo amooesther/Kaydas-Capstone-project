@@ -71,3 +71,16 @@
 Link{
     text-decoration: none;
 }
+.user button{
+    width: 103px;
+    height: 34px;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    background-color: #360AFF;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}

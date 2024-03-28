@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from '../Button/Button.jsx';
 import './ChickenWhole.css'
 import itemImg1 from '../../Assets/ItemImg1.png';
+import { Link } from 'react-router-dom';
 
 
 const ChickenWhole = () => {
@@ -40,7 +41,7 @@ const ChickenWhole = () => {
             </div>
           </div>
           <div className='btnWrapper'>
-            <div><Button variant='tertiaryOne' size='small'>View details</Button></div>
+     <Link to='./description'>  <div><Button variant='tertiaryOne' size='small'>View details</Button></div></Link> 
             <div><Button variant='tertiaryTwo' size='small'>Add to cart</Button></div>
           </div>
         </div>

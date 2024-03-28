@@ -25,7 +25,7 @@ const HeroSection = () => {
         </h1>
         <div className='inputWrapper'>
           <form onSubmit={handleFormSubmit} className='searchWrapper'>
-            <img src={search} alt='' className='searchIcon' />
+           
             <input
               type="text"
               placeholder="Search Kaydas Cold Room"

@@ -10,6 +10,7 @@ import Login from './Components/Login/Login';
 import Gallery from './pages/Gallery/Gallery.jsx'
 import ScheduleOrder from './pages/ScheduleOrder/ScheduleOrder.jsx';
 import Order from './pages/OrderHistory/Order.jsx';
+import Description from './pages/ProductDescription/Description.jsx';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path='/gallery' element={<Gallery/>} />
           <Route path='/scheduleOrder' element={<ScheduleOrder/>} />
           <Route path='/order' element={<Order/>} />
+          <Route path='/description' element={<Description/>} />
         </Routes>
       </BrowserRouter>
     </div>
