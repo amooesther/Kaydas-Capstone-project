@@ -33,7 +33,7 @@ const NavBar = () => {
 <div className='cartCount'>0</div>
 <Link to='./cart'><img src={cart} alt="cart" /></Link>
 <div className='cartCount'>0</div>
-{/* <Link to='./Login'><button>Login</button></Link>  */}
+
 
  
   {isLoggedIn ? (

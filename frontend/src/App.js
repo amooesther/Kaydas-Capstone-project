@@ -11,7 +11,7 @@ import Gallery from './pages/Gallery/Gallery.jsx'
 import ScheduleOrder from './pages/ScheduleOrder/ScheduleOrder.jsx';
 import Order from './pages/OrderHistory/Order.jsx';
 import Description from './pages/ProductDescription/Description.jsx';
-
+import SignUp from './Components/Login/SignUp.jsx'
 function App() {
   return (
     <div>
@@ -28,6 +28,7 @@ function App() {
           <Route path='/scheduleOrder' element={<ScheduleOrder/>} />
           <Route path='/order' element={<Order/>} />
           <Route path='/description' element={<Description/>} />
+          <Route path='/signup' element={<SignUp/>} />
         </Routes>
       </BrowserRouter>
     </div>

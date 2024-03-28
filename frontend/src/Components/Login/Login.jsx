@@ -49,6 +49,7 @@ const Login = () => {
             {errors.password && <span className="error">{errors.password}</span>}
           </div>
           <button type='submit' className='btn'>Login</button>
+   <Link to='/signup'><button type='submit' className='btnSignUp'>SignUp</button></Link>  
           
         </form>
       </div>
