@@ -1,0 +1,108 @@
+
+.deliveryOne{
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    
+}
+.deliveryOne img{
+    height: 40px;
+    margin-top: 20px;
+}
+.deliveryOne h1{
+    color: #daacac;
+  
+
+}
+.deliveryMap{
+    width: 100vw;
+    height: 400px;
+}
+.deliveryTwo{
+    display: flex;
+    gap: 800px;
+    justify-content: center;
+
+}
+.deliveryTwo h3{
+    color: #360AFF;
+}
+.deliveryThree{
+    display: flex;
+    width: 80vw;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: #E6EAEE;
+    margin-left: 130px;
+}
+.deliveryThree h3{
+    color: #360AFF;
+}
+.deliveryThree p{
+    font-size: 14px;
+}
+.deliveryThreeTwo{
+    width: 60%;
+}
+
+.deliveryFour{
+    margin-left: 500px;
+    width: 250px;
+   padding: 15px;
+   
+   
+}
+
+
+input[type="radio"] {
+    display: none;
+  }
+  
+  
+  .radio-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 18px; 
+    height: 18px; 
+    border-radius: 50%; 
+    border: 1px solid #360AFF; 
+  }
+  
+
+  .radio-container input[type="radio"]:checked + .radio-inner {
+    background-color: #360AFF; 
+  }
+  
+ 
+  .radio-inner {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px; 
+    height: 9px;
+    border-radius: 50%; 
+    background-color: transparent;
+  }
+  .deliveryFour label{
+    font-size: 14px;
+    font-weight: 600;
+   
+    
+  }
+  .deliveryBtn{
+    width: 300px;
+    padding: 10px;
+    background-color: #360AFF;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+  }

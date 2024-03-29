@@ -8,6 +8,7 @@ import './Description.css'
 import fishOne from '../../Assets/FishOne.png'
 import Button from '../../Components/Button/Button.jsx'
 import Footer from '../../Components/footer/Footer.jsx'
+import { Link } from 'react-router-dom'
 
 
 const Description = () => {
@@ -47,7 +48,7 @@ const Description = () => {
 
                </div>
                </div>
-               <div className='descBtn'><Button>Add to Cart</Button></div>
+           <Link to='/cart'>  <div className='descBtn'><Button>Add to Cart</Button></div></Link>  
         </div>
         <div className='descriptionRight'>
           <h4>Delivery Options</h4>
@@ -63,8 +64,8 @@ const Description = () => {
         <span>No 6 jetty rd Abuloma portharcourt</span>
        </div>
        <div className='buttons'>
-        <button className='buttOne'><img src={clock} alt="" /> ASAP</button>
-        <button className='buttTwo'> <img src={clock} alt="" /> Schedule</button>
+ <Link to='/contactUs'><button className='buttOne'><img src={clock} alt="" /> ASAP</button></Link> 
+ <Link to='/contactUs'><button className='buttTwo'> <img src={clock} alt="" /> Schedule</button></Link> 
        </div>
         </div>
       </div>

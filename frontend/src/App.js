@@ -12,6 +12,7 @@ import ScheduleOrder from './pages/ScheduleOrder/ScheduleOrder.jsx';
 import Order from './pages/OrderHistory/Order.jsx';
 import Description from './pages/ProductDescription/Description.jsx';
 import SignUp from './Components/Login/SignUp.jsx'
+import Delivery from './pages/Delivery/Delivery.jsx';
 function App() {
   return (
     <div>
@@ -29,6 +30,7 @@ function App() {
           <Route path='/order' element={<Order/>} />
           <Route path='/description' element={<Description/>} />
           <Route path='/signup' element={<SignUp/>} />
+          <Route path='/delivery' element={<Delivery/>} />
         </Routes>
       </BrowserRouter>
     </div>

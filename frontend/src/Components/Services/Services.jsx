@@ -17,10 +17,10 @@ const Services = () => {
          <button className='btnServices'>Learn more</button></div>
          </div>
          <div className='serviceTwo'>
-            <div><img src={servicesImg1} alt="" />
+           <Link to='/delivery' style={{ textDecoration: 'none' }}> <div><img src={servicesImg1} alt="" />
             <h3>Delivery</h3>
             <p>Delivery: Enjoy prompt and reliable doorstep delivery for your convenience.</p>
-            </div>
+            </div></Link>
             <div><img src={servicesImg2} alt="" />
             <h3>Tracking</h3>
             <p> Stay updated with live tracking of your orders for peace of mind</p>
@@ -36,7 +36,7 @@ const Services = () => {
             <div><img src={servicesImg5} alt="" />
             <h3>Referral Program</h3>
             <p>Earn incentives by sharing our platform with friends and family.</p></div>
-         <Link to='/Order'>  <div><img src={servicesImg6} alt="" />
+         <Link to='/Order' style={{ textDecoration: 'none' }}>  <div><img src={servicesImg6} alt="" />
             <h3>Order History</h3>
             <p>Keep track of all your purchases and sales in one convenient place.</p></div></Link> 
          </div>
