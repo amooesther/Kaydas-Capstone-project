@@ -55,7 +55,7 @@ const Footer = () => {
             
         </div>
         </div>
-        <hr />
+        <hr className='ruling'/>
         <span className='copyWrite'>&copy; 2024 Kaydas cold room. All rights reserved.</span>
     </div>
   )

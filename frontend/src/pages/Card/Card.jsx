@@ -4,6 +4,7 @@ import card from '../../Assets/card.png';
 import cardImg from '../../Assets/cardImg.png';
 import './Card.css';
 import Footer from '../../Components/footer/Footer.jsx'
+import { Link } from 'react-router-dom';
 
 const Card = () => {
   const [rememberCard, setRememberCard] = useState(false);
@@ -118,7 +119,7 @@ const Card = () => {
         
       <img src={cardImg} alt="" className='img' />
       <div className='payButton'>
-        <button onClick={handlePayment}><span>Pay</span> <span>NGN</span> 30,600.00 </button>
+   <Link to='/successpayment'  style={{ textDecoration: 'none' }}>    <button onClick={handlePayment}><span>Pay</span> <span>NGN</span> 30,600.00 </button></Link> 
       </div>
       <div className='changePayment'>
         <h4>Change Payment Method</h4>

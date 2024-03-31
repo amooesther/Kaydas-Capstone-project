@@ -16,6 +16,10 @@ import Delivery from './pages/Delivery/Delivery.jsx';
 import Tracking from './pages/Tracking/Tracking.jsx';
 import Payment from './pages/Payment/Payment.jsx';
 import Card from './pages/Card/Card.jsx';
+import Transfer from './pages/Transfer/Transfer.jsx';
+import PaymentSuccess from './pages/PaymentSuccessful/PaymentSuccess.jsx'
+import Receipt from './pages/Receipt/Receipt.jsx';
+
 function App() {
   return (
     <div>
@@ -37,6 +41,9 @@ function App() {
           <Route path='/tracking' element={<Tracking/>} />
           <Route path='/payment' element={<Payment/>} />
           <Route path='/card' element={<Card/>} />
+          <Route path='/transfer' element={<Transfer/>} />
+          <Route path='/successpayment' element={<PaymentSuccess/>} />
+          <Route path='/receipt' element={<Receipt/>} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,0 +1,16 @@
+.successPay{
+    margin-left: 500px;
+}
+.successPay p{
+    width: 220px;
+    margin-left: 20px;
+}
+.successPay h3{
+    margin-left: 20px;
+    font-size: 25px;
+}
+.success img{
+   height: 400px;
+    width: 700px;
+    margin-left: 200px;
+}

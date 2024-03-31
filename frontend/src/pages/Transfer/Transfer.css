@@ -1,0 +1,89 @@
+.transferOne{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 70px;
+    margin-left: 30px;
+}
+.transferOne p:first-child{
+    color: #2000b2;
+    font-weight: 600;
+    margin-right: 45px;
+    margin-top: 40px;
+}
+.transferOne span{
+    font-size: 10px;
+}
+.transferOne p:last-child{
+    color: #360AFF;
+    font-size: 12px;
+    font-weight: 500;
+  
+}
+.transfer{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.transfer h3{
+    width: 550px;
+    font-size: 20x;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 30px;
+    
+}
+.transferThree{
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    margin-left: 100px;
+}
+.transferThree p:first-child{
+    color: #939393;
+    font-size: 13px;
+}
+.transferThree p:last-child{
+    color: #2000b2;
+    font-size: 15px;
+    font-weight: 600;
+}
+.transferThree span{
+    font-size: 10px;
+}
+.ruler{
+    border-bottom: 1px solid #939393;
+    width: 1100px;
+    margin-left: 100px;
+}
+.transferPay{
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 400px;
+    margin-top: 20px;
+}
+.transferPayButton{
+    background-color: #2000b2;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+.transPay{
+   
+    color: #2000b2 ;
+    font-weight: 500;
+}
+.transPay button{
+    color: #bdbdbd;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}

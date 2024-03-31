@@ -40,10 +40,10 @@ const Payment = () => {
             <img src={USSD} alt="" />
             <p> Pay with USSD</p>
             </div>
-           <div className='pay'>
+    <Link to="/transfer" style={{ textDecoration: 'none' }}>    <div className='pay'>
            <img src={bank} alt="" /> 
            <p>Pay with Bank</p>
-           </div>
+           </div></Link>   
             
             
         </div>
