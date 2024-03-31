@@ -13,6 +13,9 @@ import Order from './pages/OrderHistory/Order.jsx';
 import Description from './pages/ProductDescription/Description.jsx';
 import SignUp from './Components/Login/SignUp.jsx'
 import Delivery from './pages/Delivery/Delivery.jsx';
+import Tracking from './pages/Tracking/Tracking.jsx';
+import Payment from './pages/Payment/Payment.jsx';
+import Card from './pages/Card/Card.jsx';
 function App() {
   return (
     <div>
@@ -31,6 +34,9 @@ function App() {
           <Route path='/description' element={<Description/>} />
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/delivery' element={<Delivery/>} />
+          <Route path='/tracking' element={<Tracking/>} />
+          <Route path='/payment' element={<Payment/>} />
+          <Route path='/card' element={<Card/>} />
         </Routes>
       </BrowserRouter>
     </div>

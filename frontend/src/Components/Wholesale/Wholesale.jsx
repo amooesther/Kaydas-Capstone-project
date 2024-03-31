@@ -39,12 +39,12 @@ const Wholesale = () => {
                   <span>type</span>
                 </div>
                 <div>
-                  <p>60,000</p>
+                  <p>6,000</p>
                   <span>price</span>
                 </div>
               </div>
               <div className='btnWrapper'>
-              <div><Button variant='tertiaryOne' size='small' onClick={() => navigate('./gallery/description')}>View details</Button></div>
+              <Link to='/description'> <div><Button variant='tertiaryOne' size='small'>View details</Button></div></Link>
                 <div><Button variant='tertiaryTwo' size='small'>Add to cart</Button></div>
               </div>
             </div>

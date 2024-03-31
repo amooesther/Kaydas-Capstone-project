@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import Button from '../Button/Button.jsx';
-import './ChickenWhole.css'
+import './ChickenItems.css'
 import itemImg1 from '../../Assets/ItemImg1.png';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 
-const ChickenWhole= () => {
-  const navigate = useNavigate(); 
+const Chicken = () => {
     const [savedItems, setSavedItems] = useState([
         {
           id: 1,
@@ -39,25 +36,22 @@ const ChickenWhole= () => {
                   <span>type</span>
                 </div>
                 <div>
-                  <p>6,000</p>
+                  <p>60,000</p>
                   <span>price</span>
                 </div>
               </div>
               <div className='btnWrapper'>
-              <Link to='/description'> <div><Button variant='tertiaryOne' size='small'>View details</Button></div></Link>
+               <Link to='/description'> <div><Button variant='tertiaryOne' size='small'>View details</Button></div></Link>
                 <div><Button variant='tertiaryTwo' size='small'>Add to cart</Button></div>
               </div>
             </div>
           </div>
         ));
       };
-
-
-
   return (
     <div>
         <div className='cartCards'>
-      <h2>Whole Chicken</h2>
+      <h2>Chicken </h2>
       <div className='itemWrapper'>
         
         {repeatItemWrap()}
@@ -67,4 +61,4 @@ const ChickenWhole= () => {
   )
 }
 
-export default ChickenWhole
+export default Chicken;

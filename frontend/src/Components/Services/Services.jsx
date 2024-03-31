@@ -21,18 +21,18 @@ const Services = () => {
             <h3>Delivery</h3>
             <p>Delivery: Enjoy prompt and reliable doorstep delivery for your convenience.</p>
             </div></Link>
-            <div><img src={servicesImg2} alt="" />
+            <Link to='/tracking' style={{ textDecoration: 'none' }}><div><img src={servicesImg2} alt="" />
             <h3>Tracking</h3>
             <p> Stay updated with live tracking of your orders for peace of mind</p>
-            </div>
-            <div><img src={servicesImg3} alt="" />
+            </div></Link>
+            <Link to='/subscription' style={{ textDecoration: 'none' }}>  <div><img src={servicesImg3} alt="" />
             <h3>Subscription</h3>
             <p>Unlock exclusive benefits and savings with our subscription plans..</p>
-            </div>
-            <div><img src={servicesImg4} alt="" />
+            </div></Link>
+         <Link to='/Payment' style={{ textDecoration: 'none' }}>  <div><img src={servicesImg4} alt="" />
             <h3>Multi-Payment Option</h3>
             <p>Multi-payment Option: Choose from various payment methods for hassle free transaction.</p>
-            </div>
+            </div></Link> 
             <div><img src={servicesImg5} alt="" />
             <h3>Referral Program</h3>
             <p>Earn incentives by sharing our platform with friends and family.</p></div>
