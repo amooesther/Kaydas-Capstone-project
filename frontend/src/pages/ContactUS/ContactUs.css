@@ -51,10 +51,17 @@ padding: 4px;
     font-size: 13px;
     width: 300px;
 }
-.line{
+.contactLine{
     border-bottom: 1.5px solid;
 }
-
+.contactImgTwo{
+    width: 100%;
+    align-self: center;
+   margin-top: 170px;
+}
+.contactArrow{
+    margin-top:30px ;
+}
 
 @media screen and (max-width: 768px) {
     .contactUs {

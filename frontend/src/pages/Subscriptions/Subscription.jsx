@@ -51,7 +51,7 @@ const Subscription = () => {
           <div className='subLeft'>
             <div><img src={deliveryVan} alt="" /></div>
             <div className='subOne'>
-      <Link  to='/gallery'>    <div className='btnWrapper'><Button>order Now</Button></div></Link> 
+      <Link  to='/gallery' style={{ textDecoration: 'none' }}>    <div className='btnWrapper'><Button>order Now</Button></div></Link> 
               <p>We deliver to Private Corporate Organization</p>
              <div className='subTwo'> <img src={redHeart} alt="" /> <span>11k+</span></div>
             </div>
@@ -61,7 +61,7 @@ const Subscription = () => {
           <div className='subRight'>
       <div><img src={deliveryMan} alt="" /></div>
       <div className='subOne'>
-    <Link  to='/gallery'>  <div className='btnWrapper'><Button>order Now</Button></div></Link> 
+    <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <div className='btnWrapper'><Button>order Now</Button></div></Link> 
       <p>Gift Your Loved Ones</p>
              <div className='subTwo'> <img src={redHeart} alt="" /> 11k+</div>
       </div>
@@ -73,6 +73,7 @@ const Subscription = () => {
       
       
       <div className='carouselWrap'>
+      <Link  to='/gallery' style={{ textDecoration: 'none' }}><h2 className={currentSlide === 0 ? 'active' : ''}>Chicken</h2></Link>
 <img src={subOne} alt="" />
 <h3>Weekly</h3>
 <p>Schedule weekly orders at your convenience.
@@ -82,12 +83,13 @@ const Subscription = () => {
    <span><img src={truck} alt="" /> Bulk Delivery</span>
    <span className='span'>From 300kg per product Per week</span>
    <div className='carouselBtnWrapper'>
-   <Link to='/scheduleOrder'> <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>
+   <Link to='/scheduleOrder' style={{ textDecoration: 'none' }}> <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>
     <div className='buttonWrap'> <Button variant='tertiaryOne' size='small'>Learn More</Button></div>
    </div>
       </div>
       
       <div className='carouselWrap'>
+      <Link  to='/gallery' style={{ textDecoration: 'none' }}> <h2 className={currentSlide === 1 ? 'active' : ''}>Fish</h2></Link>
 <img src={subTwo} alt="" />
 <h3>Monthly</h3>
 <p>If weekly purchase is not convinient 
@@ -97,11 +99,12 @@ const Subscription = () => {
    <span><img src={truck} alt="" /> Bulk Delivery</span>
    <span className='span'>From 500kg  Per  month</span>
    <div className='carouselBtnWrapper'>
-  <Link to='/scheduleOrder'>  <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>
+  <Link to='/scheduleOrder' style={{ textDecoration: 'none' }}>  <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>
     <div className='buttonWrap'> <Button variant='tertiaryOne' size='small'>Learn More</Button></div>
    </div>
       </div>
       <div className='carouselWrap'>
+      <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <h2 className={currentSlide === 1 ? 'active' : ''}>Whole</h2></Link>
 <img src={subThree} alt="" />
 <h3>Random</h3>
 <p>You have the option to order at anytime and
@@ -111,11 +114,12 @@ const Subscription = () => {
    <span><img src={truck} alt="" />4,8 or unlimited days by month</span>
    <span className='span'>From 200kg- 5tonnes and above</span>
    <div className='carouselBtnWrapper'>
-  <Link to='/scheduleOrder'><div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>  
+  <Link to='/scheduleOrder' style={{ textDecoration: 'none' }}><div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>  
     <div className='buttonWrap'> <Button variant='tertiaryOne' size='small'>Learn More</Button></div>
    </div>
       </div>
       <div className='carouselWrap'>
+      <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <h2 className={currentSlide === 1 ? 'active' : ''}>Chicken part</h2></Link>
 <img src={subFour} alt="" />
 <h3>Daily Orders</h3>
 <p>Your satisfaction is our priorityTaking the stress 
@@ -125,7 +129,7 @@ const Subscription = () => {
    <span><img src={truck} alt="" /> Bulk Delivery</span>
    <span className='span'>From 300kg per product Per week</span>
    <div className='carouselBtnWrapper'>
- <Link to='/scheduleOrder'> <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>  
+ <Link to='/scheduleOrder' style={{ textDecoration: 'none' }}> <div className='buttonWrap'><Button variant='tertiaryTwo' size='small'>Subscribe Now</Button></div></Link>  
     <div className='buttonWrap'> <Button variant='tertiaryOne' size='small'>Learn More</Button></div>
    </div>
       </div>

@@ -91,3 +91,90 @@ hr{
     justify-content: center;
     align-items: center
 }
+
+@media screen and (max-width: 768px) {
+    .customer h1 {
+        font-size: 30px; 
+    }
+
+    .customer {
+        height: 60px; 
+        }
+
+    .overallRatings {
+        gap: 20px; 
+    }
+
+    .firstReview {
+        width: 50%; 
+        flex-direction: column;
+        gap: 20px;
+        height: auto; 
+    }
+.overallRatings {
+    display: flex;
+    flex-direction: column;
+    
+}
+    .reviewText {
+        width: 80%; 
+        }
+
+    .reviewText span {
+        margin-left: 0; 
+        margin-top: 5px; 
+        display: block; 
+    }
+
+    .aboutOne,
+    .aboutTwo {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .about {
+        width: 70%; 
+        max-width: 80%; 
+        }
+}
+@media screen and (min-width: 728px) and (max-width: 1024px) {
+    .customer h1 {
+        font-size: 30px; 
+    }
+
+    .customer {
+        height: 60px; 
+    }
+
+    .overallRatings {
+        gap: 20px; 
+    }
+
+    .firstReview {
+        width: 100%; 
+        flex-direction: column; 
+        gap: 20px; 
+        height: auto; 
+    }
+
+    .reviewText {
+        width: 100%; 
+    }
+
+    .reviewText span {
+        margin-left: 0; 
+        margin-top: 5px; 
+        display: block; 
+    }
+
+    .aboutOne,
+    .aboutTwo {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+
+    .about {
+        width: 100%; 
+        max-width: 100%; 
+    }
+}

@@ -2,8 +2,10 @@ import React from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
 import Button from '../../Components/Button/Button.jsx'
 import contactImg from '../../Assets/contactImg.png'
+import arrowLeftBlue from '../../Assets/arrowLeftBlue.png'
 import Footer from '../../Components/footer/Footer.jsx'
 import './ContactUs.css'
+import { Link } from 'react-router-dom'
 const ContactUs = () => {
   return (
     <div >
@@ -27,7 +29,7 @@ const ContactUs = () => {
            <p>By clicking the button below, you agree to our Terms of Services
              and acknowledge our Global Privacy Policy</p>
             <Button>Get in touch</Button>
-            <div className='line'></div> 
+            <div className='contactLine'></div> 
              <h4>Email Us</h4>
              <span>kaydasenterprise@gmail.com</span>
              <h4>Call Us</h4>
@@ -36,7 +38,8 @@ const ContactUs = () => {
              <span>(234) 803-7735-462</span>
       </div>
       <div className='contactLeft'>
-<img src={contactImg} alt="" />
+   <Link to='/'>    <img src={arrowLeftBlue} alt="" className='contactArrow'/> </Link> <br/>
+<img src={contactImg} alt=""  className='contactImgTwo'/>
       </div>
       </div>
 <Footer/>

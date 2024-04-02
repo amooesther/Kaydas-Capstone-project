@@ -135,3 +135,21 @@
    justify-content: center;
     align-items: center;
    }
+
+   .carouselWrap h2 {
+   color: #798686;
+   font-size: 24px; 
+   background-color: #efecec;
+   height: 45px;
+   border-radius: 10px;
+  }
+  
+  .carouselWrap h2.active {
+    
+    color: white; 
+    font-size: 24px; 
+    background-color: #2000B2;
+    height: 45px;
+   border-radius: 10px;
+  }
+  
