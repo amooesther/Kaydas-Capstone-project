@@ -59,7 +59,7 @@ const Subscription = () => {
           </div>
           <div className='verticalLine'></div>
           <div className='subRight'>
-      <div><img src={deliveryMan} alt="" /></div>
+      <div className='deliveryGuy'><img src={deliveryMan} alt="" /></div>
       <div className='subOne'>
     <Link  to='/gallery' style={{ textDecoration: 'none' }}>  <div className='btnWrapper'><Button>order Now</Button></div></Link> 
       <p>Gift Your Loved Ones</p>

@@ -86,4 +86,8 @@ padding: 4px;
         width: 100%;
         align-self: center;
     }
+    .contactArrow{
+        display:none;
+        
+    }
 }
