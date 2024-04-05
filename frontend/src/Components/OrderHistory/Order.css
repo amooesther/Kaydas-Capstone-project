@@ -1,0 +1,134 @@
+.order{
+    width: 250px;
+    background-color: #f6f5ff;
+    color: #969BA3;
+    font-weight: 400;
+    margin-top: 32px;
+    margin-left: 40px;
+}
+.orderItems{
+    display: flex;
+    height: 50px;
+    justify-content: space-evenly;
+ 
+
+}
+.orderItems img{
+    width: 10px;
+    height: 10px;
+    margin-top: 22px;
+}
+.orderItems p{
+    font-size: 14px;
+    width: 20px;
+}
+
+.orderItems:hover{
+    background-color:#360AFF ;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    
+
+}
+
+.orderTwo{
+    margin-top: 50px;
+}
+.orderTwo h2{
+    color: black;
+    font-weight: 500;
+    font-size: 19px;
+    text-align: center;
+}
+.orderTwo p{
+    width: 80%;
+}
+
+.logout{
+    display: flex;
+    margin-top: 30px;
+    padding: 20px;
+    width: 83%;  
+    justify-content: space-between;
+  
+   
+  
+}
+.logout img{
+    height: 12px;
+    width: 15px;
+    margin-top: 20px;
+    margin-right: 35px;
+    
+}
+.logout:hover{
+    background-color: #f7d8d8;
+    height: 40px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .order {
+        position: fixed;
+        top: 100px; 
+        left: 0;
+        width: 250px;
+        background-color: rgba(246, 245, 255, 0.9);
+        color: #28292a;
+        font-weight: 400;
+        margin-top: 32px;
+        margin-left: 0px;
+        z-index: 101; 
+    }
+    
+    .order.show {
+        display: block;
+    }
+
+    .orderItems {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    
+ 
+    .orderItems:hover {
+        background-color: #360AFF;
+        color: white;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    .orderItems p {
+        font-size: 12px;
+        width: 30px;
+    }
+
+    .orderItems img {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .orderTwo h2 {
+        font-size: 16px;
+    }
+
+    .logout {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .orderItems img {
+        display: none;
+    }
+    
+    .logout:hover {
+        background-color: #f7d8d8;
+        height: 40px;
+        border-radius: 10px;
+    }
+   
+}

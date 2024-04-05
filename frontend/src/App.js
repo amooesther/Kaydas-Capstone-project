@@ -9,7 +9,6 @@ import Subscription from './pages/Subscriptions/Subscription';
 import Login from './Components/Login/Login';
 import Gallery from './pages/Gallery/Gallery.jsx'
 import ScheduleOrder from './pages/ScheduleOrder/ScheduleOrder.jsx';
-import Order from './pages/OrderHistory/Order.jsx';
 import Description from './pages/ProductDescription/Description.jsx';
 import SignUp from './Components/Login/SignUp.jsx'
 import Delivery from './pages/Delivery/Delivery.jsx';
@@ -19,6 +18,7 @@ import Card from './pages/Card/Card.jsx';
 import Transfer from './pages/Transfer/Transfer.jsx';
 import PaymentSuccess from './pages/PaymentSuccessful/PaymentSuccess.jsx'
 import Receipt from './pages/Receipt/Receipt.jsx';
+import MyOrders from './pages/MyOrders/MyOrders.jsx';
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/gallery' element={<Gallery/>} />
           <Route path='/scheduleOrder' element={<ScheduleOrder/>} />
-          <Route path='/order' element={<Order/>} />
+          <Route path='/myorders' element={<MyOrders/>} />
           <Route path='/description' element={<Description/>} />
           <Route path='/signup' element={<SignUp/>} />
           <Route path='/delivery' element={<Delivery/>} />
