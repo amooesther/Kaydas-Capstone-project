@@ -135,3 +135,66 @@
     cursor: pointer;
     margin-bottom: 40px;
   }
+
+
+  @media (max-width: 1200px) {
+    .cardTwo,
+    .cardFour {
+      width: 80%;
+      max-width: 800px;
+    }
+  
+    .img {
+      margin-left: 20%;
+    }
+  
+    .toggles,
+    .payButton,
+    .changePayment {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .cardThree {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .line {
+      display: none;
+    }
+  .crd{
+    display: none;
+  }
+    .cards {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .img {
+      margin-left: 20%;
+      width: 70%;
+      height: 70%;
+    }
+  
+    .payButton {
+      width: 80%;
+      margin-left: 10%;
+    }
+  
+    .changePayment {
+      margin-left: 20%;
+    }
+  }
+  
+ 
+  @media (max-width: 480px) {
+    .cardThree input,
+    .cards input {
+      width: 100%;
+    }
+  }

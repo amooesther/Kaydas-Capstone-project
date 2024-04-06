@@ -46,3 +46,50 @@
     padding: 10px;
     margin-bottom: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+    .receiptOne p:first-child,
+    .receiptOne p:last-child {
+      font-size: 12px;
+    }
+    .payRe{
+        width: 300px;
+        border-radius: 20px;
+        background-color: #360AFF;
+        color: white;
+        margin-left: 50px;
+        margin-bottom: 40px;
+        padding-top: 20px;
+    }
+    .receiptTWo {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .receipt button {
+      width: 90%;
+    }
+  }
+  
+
+  @media only screen and (min-width: 768px) {
+    .receiptTWo {
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+  }
+  
+
+  @media only screen and (min-width: 992px) {
+    .receipt button {
+      width: 80%;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 1200px) {
+    .receiptTWo {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+  }

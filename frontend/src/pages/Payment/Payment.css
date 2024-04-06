@@ -88,3 +88,28 @@
    background-color: #ebebeb; 
  }
  
+ @media screen and (max-width: 768px) {
+  .payStackWrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .paystack{
+    width: 80%;
+  }
+
+  .paymentWrap {
+    margin-left: 0;
+  }
+  .logo{
+    display: none;
+  }
+  .pay {
+    width: calc(70% - 30px); 
+    margin-left: 45px;
+    margin-right: 15px;
+  }
+  .paymentWrap h2{
+    font-size: 17px;
+    margin-left: 50px;
+  }
+}

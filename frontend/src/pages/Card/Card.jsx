@@ -81,7 +81,7 @@ const Card = () => {
               placeholder='00000 000000 000000 0000'
             />
           </div>
-          <div><img src={card} alt="" /></div>
+          <div className='crd'><img src={card} alt="" /></div>
         </div>
         <div className='cardFour'>
           <div className='cards'>
