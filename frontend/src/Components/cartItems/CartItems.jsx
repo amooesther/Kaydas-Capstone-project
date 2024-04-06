@@ -2,6 +2,8 @@ import React from 'react'
 import './CartItems.css'
 import trash from '../../Assets/trash.png'
 import close from '../../Assets/close.png'
+
+
 const CartItems = () => {
   return (
     <div >

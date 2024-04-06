@@ -58,7 +58,7 @@ const Description = () => {
       <option value="location">Location</option>
       <option value="Location">Location</option>
     </select>
-     <div className='map'><iframe src="https://maps.google.com/maps?width=450&amp;height=300&amp;hl=en&amp;q=Abuloma%20Port%20Harcourt%20Nigeria+(Kaydas%20cold%20Room)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps trackers</a></iframe></div> 
+     <div className='map'><iframe width="220" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=250&amp;height=250&amp;hl=en&amp;q=abuloma%20port%20harcourt+(My%20Business%20Name)&amp;t=&amp;z=9&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/" className='frame'>gps trackers</a></iframe></div>
        <div className='location'>
         <img src={location} alt="" />
         <span>No 6 jetty rd Abuloma portharcourt</span>

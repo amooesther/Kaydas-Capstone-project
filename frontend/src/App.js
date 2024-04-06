@@ -19,6 +19,8 @@ import Transfer from './pages/Transfer/Transfer.jsx';
 import PaymentSuccess from './pages/PaymentSuccessful/PaymentSuccess.jsx'
 import Receipt from './pages/Receipt/Receipt.jsx';
 import MyOrders from './pages/MyOrders/MyOrders.jsx';
+import Profile from './pages/Profile/Profile.jsx';
+import NutritionalTip from './Components/NutritionalTip/NutritionalTip.jsx';
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
           <Route path='/transfer' element={<Transfer/>} />
           <Route path='/successpayment' element={<PaymentSuccess/>} />
           <Route path='/receipt' element={<Receipt/>} />
+          <Route path='/profile' element={<Profile/>} />
+          <Route path='/nutrition' element={<NutritionalTip/>} />
         </Routes>
       </BrowserRouter>
     </div>
