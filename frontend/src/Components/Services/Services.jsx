@@ -36,7 +36,7 @@ const Services = () => {
             <div><img src={servicesImg5} alt="" />
             <h3>Referral Program</h3>
             <p>Earn incentives by sharing our platform with friends and family.</p></div>
-         <Link to='/Order' style={{ textDecoration: 'none' }}>  <div><img src={servicesImg6} alt="" />
+         <Link to='/myorders' style={{ textDecoration: 'none' }}>  <div><img src={servicesImg6} alt="" />
             <h3>Order History</h3>
             <p>Keep track of all your purchases and sales in one convenient place.</p></div></Link> 
          </div>
