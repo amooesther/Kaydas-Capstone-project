@@ -25,9 +25,9 @@ const Gallery = () => {
     <div className='gallery'>
       <NavBar />
       <div className='galleryWrapper'>
-        <form action=''>
+        <form action='' className='galleryForm'>
           <input type='text' placeholder='Search Kaydas coldroom' />
-          <Button>Search</Button>
+        <div className='galleryBtn'><Button >Search</Button></div>  
         </form>
       </div>
       <TopDiscount />

@@ -15,9 +15,10 @@ const Delivery = () => {
   return (
     <div>
       <NavBar />
+      <div className='deliveryWrap'>
       <div className='deliveryOne'>
         <img src={arrowLeftBlue} alt="" />
-        <h1>Delivery status</h1>
+        <h1 className='heading'>Delivery status</h1>
       </div>
       <div className='deliveryMap'>
         <div>
@@ -51,7 +52,7 @@ const Delivery = () => {
       <div className='deliveryFour'>
         <h3>Track your order</h3>
      
-        <div>
+        <div className=''>
           <div className="radio-container">
             <input
               type="radio"
@@ -123,7 +124,7 @@ Thank you for choosing us</label>
           <br />
           <button className='deliveryBtn'>Track Order</button>
       </div>
-      
+      </div>
       
       <Footer/>
     </div>

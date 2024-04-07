@@ -78,3 +78,28 @@ margin-left: 60px;
     display: block;
   }
   
+ 
+  @media only screen and (min-width: 600px) {
+    .loginImg {
+      margin-left: 0; 
+      width: 50%;
+      height: 50%;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 768px) {
+    .formContainer {
+      padding: 50px; 
+    }
+  }
+  
+
+  @media only screen and (min-width: 992px) {
+    .loginPage {
+      max-width: 500px;
+    }
+  }
+  
+  
+  

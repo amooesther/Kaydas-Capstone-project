@@ -12,7 +12,7 @@ const NavBar = () => {
   const [menuVisible, setMenuVisible] = useState(false); 
 
   const handleLogout = () => {
-    setIsLoggedIn(false);
+    setIsLoggedIn(true);
   };
 
   const toggleMenu = () => {

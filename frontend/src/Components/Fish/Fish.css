@@ -1,30 +1,33 @@
 .cartCards h2{
     color: #360AFF;
-    font-size: 30px;
-    margin-left: 30px;
+    font-size: 25px;
+    margin-left: 50px;
 
 }
 .itemWrapper{
     display: flex;
-    gap: 50px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
     
 }
 
 .itemWrap{
-width: 185px;
-height: 320px;
+width: 150px;
+height: auto;
 border: 0.1px solid #aaa8a8; 
 border-radius: 8px;
 padding: 5px;
+margin-bottom: 50px;
 }
 .itemWrap img{
-    padding: 15px;
+    padding: 5px;
     
 }
 .itemOne{
+   
     display: flex;
+    height: 20px;
     border: 0.1px solid #aaa8a8; 
     justify-content: space-between;
     align-items: center;
@@ -41,6 +44,8 @@ padding: 5px;
     color: #121212;
     font: 10px;
     border: 0.1px solid #aaa8a8; 
+    margin-left: 20px;
+    margin-top: 10px;
 }
 .itemCard span{
     font-size: 8px;
@@ -49,4 +54,50 @@ padding: 5px;
 .btnWrapper{
     display: flex;
     gap: 12px;
+    margin-left: 25px;
 }
+
+@media only screen and (max-width: 600px) {
+    .itemWrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap; 
+        gap: 35px; 
+    }
+
+    .itemWrap {
+        width: 60%; 
+    }
+    .cartCards h2{
+      
+        font-size: 22px;
+       text-align: center;
+    
+    }
+}
+.itemCard{
+    width: 80%;
+}
+
+@media only screen and (min-width: 768px) {
+    .itemWrap {
+        display: flex;
+        flex-direction: column;
+        width: calc(50% - 20px); 
+    }
+    .btnWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .itemWrap {
+        display: flex;
+        flex-direction: column;
+        width: calc(33.33% - 20px); 
+    }
+}
+
+
