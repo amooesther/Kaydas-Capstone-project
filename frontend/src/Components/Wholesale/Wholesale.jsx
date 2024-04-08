@@ -23,7 +23,7 @@ const Wholesale = () => {
       ]);
 
       const repeatItemWrap = () => {
-        return [...Array(5)].map((_, index) => (
+        return [...Array(4)].map((_, index) => (
           <div key={index} className='itemWrap'>
             
             <img src={itemImg1} alt="" />

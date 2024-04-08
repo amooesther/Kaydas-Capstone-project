@@ -17,6 +17,7 @@
 
 @media only screen and (max-width: 600px) {
     .galleryWrapper {
+        
         margin-left: 20%;
     }
     .galleryWrapper input{
@@ -28,6 +29,14 @@
     }
     .galleryBtn{
         margin-left: 40px;
+    }
+    .galleryForm{
+        display: flex;
+        flex-direction: column;
+    }
+    .galleryWrapper input{
+        width: 60%;
+        
     }
 }
 

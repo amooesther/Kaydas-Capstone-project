@@ -1,7 +1,7 @@
 .cartCards h2{
     color: #360AFF;
     font-size: 25px;
-    margin-left: 50px;
+    margin-left: 150px;
 
 }
 .itemWrapper{
@@ -13,7 +13,7 @@
 }
 
 .itemWrap{
-width: 150px;
+width: 220px !important;
 height: auto;
 border: 0.1px solid #aaa8a8; 
 border-radius: 8px;
@@ -21,13 +21,15 @@ padding: 5px;
 margin-bottom: 50px;
 }
 .itemWrap img{
+    width: 60%;
+    margin-left: 40px;
     padding: 5px;
     
 }
 .itemOne{
    
     display: flex;
-    height: 20px;
+    height: 30px;
     border: 0.1px solid #aaa8a8; 
     justify-content: space-between;
     align-items: center;
@@ -85,10 +87,7 @@ margin-bottom: 50px;
         flex-direction: column;
         width: calc(50% - 20px); 
     }
-    .btnWrapper{
-        display: flex;
-        flex-direction: column;
-    }
+    
 }
 
 

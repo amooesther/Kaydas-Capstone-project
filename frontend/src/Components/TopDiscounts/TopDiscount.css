@@ -103,15 +103,15 @@
   
   .discounts {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: center;
     gap: 20px;
   }
   
   .discountOne {
-    flex: 1; /* Each item takes up equal space */
-    max-width: 300px; /* Limit width if needed */
+    flex: 1; 
+    max-width: 300px; 
     height: 500px;
     border: 1px solid #805B5B;
     border-radius: 48px;
@@ -151,7 +151,7 @@
     margin-left: 125px;
   }
   
-  /* Responsive styles */
+ 
   @media only screen and (max-width: 768px) {
     .discountTop {
       padding-left: 80px;
@@ -169,6 +169,10 @@
   
     .topDiscountFour {
       margin-left: 125px;
+    }
+    .discountTopOne{
+      display: flex;
+      flex-direction: column;
     }
   }
   
@@ -209,7 +213,7 @@
     }
   }
   @media only screen and (max-width: 768px) {
-    /* Styles for iPad Mini landscape mode */
+   
     .discountTop {
       padding-left: 80px;
     }
