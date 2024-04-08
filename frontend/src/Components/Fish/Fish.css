@@ -63,17 +63,17 @@ margin-bottom: 50px;
     .itemWrapper {
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap; 
-        gap: 35px; 
+       
+        gap: 5px; 
     }
 
     .itemWrap {
-        width: 60%; 
+        width: 70%;
     }
     .cartCards h2{
       
-        font-size: 22px;
-       text-align: center;
+        font-size: 17px;
+       
     
     }
 }
@@ -81,13 +81,16 @@ margin-bottom: 50px;
     width: 80%;
 }
 
-@media only screen and (min-width: 768px) {
-    .itemWrap {
-        display: flex;
-        flex-direction: column;
-        width: calc(50% - 20px); 
-    }
+@media (max-width: 768px) {
     
+    .itemWrap {
+       width: 70%;
+    }
+    .itemWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       margin-left: 60px;
+    }
 }
 
 
@@ -95,8 +98,18 @@ margin-bottom: 50px;
     .itemWrap {
         display: flex;
         flex-direction: column;
-        width: calc(33.33% - 20px); 
+        width:90%; 
     }
 }
-
+@media (max-width: 480px) {
+    .itemWrap {
+        width: 100%; 
+    }
+    .itemWrapper {
+        display: grid;
+        grid-template-columns: repeat( auto-fill, minmax(220px, 1fr));
+        gap: 2px;
+        margin-left: 80px; 
+    }
+}
 

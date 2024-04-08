@@ -42,6 +42,7 @@
 }
 .deliveryThree p{
     font-size: 14px;
+    width: 350px;
 }
 .deliveryThreeTwo{
     width: 60%;
@@ -54,119 +55,183 @@
    
    
 }
-
-
-input[type="radio"] {
-    display: none;
-  }
-  
-  
-  .radio-container {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 18px; 
-    height: 18px; 
-    border-radius: 50%; 
-    border: 1px solid #360AFF; 
-  }
-  
-
-  .radio-container input[type="radio"]:checked + .radio-inner {
-    background-color: #360AFF; 
-  }
-  
- 
-  .radio-inner {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 9px; 
-    height: 9px;
-    border-radius: 50%; 
-    background-color: transparent;
-  }
-  .deliveryFour label{
-    font-size: 14px;
-    font-weight: 600;
-   
-    
-  }
-  .deliveryBtn{
-    width: 300px;
-    padding: 10px;
-    background-color: #360AFF;
-    color: white;
-    font-weight: 500;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    margin-top: 15px;
-    cursor: pointer;
-  }
-
-  @media only screen and (min-width: 600px) {
-    .deliveryWrap{
-      width: 80%;
-    }
-.deliveryWrap h1{
-    font-size: 18px;
+.deliveryFour p {
+  font-weight: 500;
+  font-size: 12px;
 }
-    .deliveryOne {
-      gap: 20px;
-      width: 70%;
-    }
-    
-    .deliveryOne img {
-      height: 40px; 
-    }
-  
-    .deliveryOne h1{
-      color: #daacac;
-      font-size: 18px;
-    
-  
-  }
-  .deliveryThree{
-    display: flex;
+
+.radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.radio-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container .radio-inner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #360AFF;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-container input[type="radio"]:checked + .radio-inner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #360AFF;
+}
+
+.deliveryFour label {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.deliveryBtn {
+  width: 300px;
+  padding: 10px;
+  background-color: #360AFF;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .deliveryOne {
     flex-direction: column;
-    width: 80%;
-    justify-content: center;
     align-items: center;
-    gap: 3px;
-    background-color: #E6EAEE;
-    /* margin-left: 130px; */
-}
- 
+    gap: 20px;
   }
-  
 
-  @media only screen and (min-width: 768px) {
-    .deliveryOne {
-      gap: 50px; 
-    }
-  
-    .deliveryTwo {
-      flex-direction: row;
-    }
-  
-    .deliveryTwo h3 {
-      font-size: 20px; 
-    }
-  
-    .deliveryFour {
-      max-width: 250px; 
-    }
-    
+  .deliveryOne img {
+    margin-top: 10px;
   }
-  
-  
- 
-  @media only screen and (min-width: 992px) {
-    .deliveryOne {
-      gap: 200px; 
-    }
+
+  .deliveryOne h1 {
+    font-size: 20px;
   }
+
+  .deliveryMap {
+    width: 70vw;
+  }
+
+  .deliveryTwo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .deliveryTwo h3 {
+    font-size: 16px;
+    margin-right: 100px;
+  }
+
+  .deliveryThree {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 70vw;
+    margin-left: 0;
+  }
+
+  .deliveryThree p {
+    width: 50vw;
+  }
+
+  .deliveryFour {
+    margin-left: 0;
+    width: 70vw;
+    padding: 5px;
+  }
+
+  .deliveryFour p {
+    font-size: 11px;
+  }
+
+
+
+  .deliveryBtn {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* Your existing CSS for responsiveness from 728px to 1024px */
+
+  /* Additional CSS for screens up to 1024px */
+  .deliveryOne {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .deliveryOne img {
+    margin-top: 10px;
+  }
+
+  .deliveryOne h1 {
+    font-size: 20px;
+  }
+
+  .deliveryMap {
+    width: 70vw;
+  }
+
+  .deliveryTwo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .deliveryTwo h3 {
+    font-size: 16px;
+    margin-right: 100px;
+  }
+
+  .deliveryThree {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 70vw;
+    margin-left: 0;
+  }
+
+  .deliveryThree p {
+    width: 50vw;
+  }
+
+  .deliveryFour {
+    margin-left: 0;
+    width: 70vw;
+    padding: 5px;
+  }
+
+  .deliveryFour p {
+    font-size: 11px;
+  }
+
+  .deliveryBtn {
+    width: 70vw;
+  }
+}

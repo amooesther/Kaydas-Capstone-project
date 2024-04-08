@@ -87,3 +87,96 @@
     cursor: pointer;
     margin-bottom: 40px;
 }
+
+@media screen and (max-width: 767px) {
+    .transferOne {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .transferOne p:first-child {
+      margin-right: 0;
+      margin-top: 0;
+      text-align: center;
+    }
+  
+    .transferOne p:last-child {
+      text-align: center;
+    }
+  
+    .transfer h3 {
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 2%;
+    }
+  
+    .transferThree,
+    .ruler {
+      width: 90%;
+      margin-left: 5%;
+    }
+  
+    .transferPay {
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 2%;
+    }
+  
+    .transPay button {
+      margin-bottom: 2%;
+    }
+  }
+
+  /* Media queries for viewport width of 728px to 1024px */
+@media screen and (min-width: 728px) and (max-width: 1024px) {
+    .transferOne {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-right: 5%;
+      margin-left: 5%;
+    }
+  
+    .transferOne p:first-child {
+      margin-right: 0;
+      margin-top: 0;
+      text-align: center;
+    }
+  
+    .transferOne p:last-child {
+      text-align: center;
+    }
+  
+    .transfer h3 {
+      width: 90%;
+      font-size: 18px; /* Adjust font size as needed */
+      margin-left: 5%;
+      margin-top: 20px; /* Adjust margin as needed */
+    }
+  
+    .transferThree,
+    .ruler {
+      width: 90%;
+      margin-left: 5%;
+    }
+  
+    .transferThree p:first-child {
+      font-size: 12px; /* Adjust font size as needed */
+    }
+  
+    .transferThree p:last-child {
+      font-size: 14px; /* Adjust font size as needed */
+    }
+  
+    .transferPay {
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 20px; /* Adjust margin as needed */
+    }
+  
+    .transPay button {
+      margin-bottom: 20px; /* Adjust margin as needed */
+    }
+  }
+  

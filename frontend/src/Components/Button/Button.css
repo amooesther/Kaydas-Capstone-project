@@ -50,7 +50,16 @@
 .btn[data-size="large"]{
     padding: 10.5px 0px;
     width: 300px;
+    
 }
 .btn[data-size="small"]{
     padding: 4px 0px;
+}
+.btn[data-size="extraLarge"]{
+    padding: 10px 0px;
+    width: 220px;
+    height: 45px;
+    font-weight: 600;
+   
+    
 }
