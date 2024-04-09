@@ -21,7 +21,7 @@ const Login = () => {
     const validationErrors = Validation(value);
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
-      // Proceed with login logic or API call
+     
       console.log("Form submitted successfully");
     }
   };
