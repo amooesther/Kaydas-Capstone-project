@@ -5,24 +5,31 @@ import Validation from '../LoginValidation';
 import NavBar from '../NavBar/NavBar'
 import loginImg1 from '../../Assets/loginImg1.png'
 import Footer from '../footer/Footer';
-
+import { fetchLogin } from '../../ApiRequests/Login.js'; 
 
 const Login = () => {
   const [value, setValue] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});
   
   const handleInput = (event) => {
-    const { name, value } = event.target;
-    setValue((prev) => ({ ...prev, [name]: value }));
+    const { id, value } = event.target; // Use 'id' instead of 'name'
+    setValue((prev) => ({ ...prev, [id]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const validationErrors = Validation(value);
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
-      // Proceed with login logic or API call
-      console.log("Form submitted successfully");
+      try {
+      
+        const data = await fetchLogin();
+        
+        console.log("Login successful", data);
+      } catch (error) {
+        console.error("Login failed", error);
+        
+      }
     }
   };
 
@@ -40,12 +47,12 @@ const Login = () => {
         <form onSubmit={handleSubmit} className='form'>
           <div className=''>
             <label htmlFor="email">Email </label><br />
-            <input onChange={handleInput} type="email" placeholder="Enter email" name='email' />
+            <input onChange={handleInput} type="email" placeholder="Enter email" id='email' /> {/* Use 'id' instead of 'name' */}
             {errors.email && <span className="error">{errors.email}</span>}
           </div>
           <div>
             <label htmlFor="password">Password </label><br />
-            <input onChange={handleInput} type="password" placeholder="Password" name='password' />
+            <input onChange={handleInput} type="password" placeholder="Password" id='password' /> {/* Use 'id' instead of 'name' */}
             {errors.password && <span className="error">{errors.password}</span>}
           </div>
           <button type='submit' className='btn'>Login</button>
