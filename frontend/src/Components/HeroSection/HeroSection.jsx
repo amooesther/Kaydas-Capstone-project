@@ -26,14 +26,14 @@ const HeroSection = () => {
         <div className='inputWrapper'>
           <form onSubmit={handleFormSubmit} className='searchWrapper'>
            
-            <input
-              type="text"
-              placeholder="Search Kaydas Cold Room"
-              className="searchInput"
-              value={searchValue}
-              onChange={handleInputChange}
-              
-            />
+          <input
+         type="text"
+         placeholder="Search Kaydas Cold Room"
+         className="searchInput"
+         value={searchValue}
+         onChange={handleInputChange}
+         />
+
            
             <button type='submit' className='searchButton'>Search</button>
           </form>

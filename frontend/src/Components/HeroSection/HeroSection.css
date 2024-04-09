@@ -14,7 +14,7 @@
 .heroText{
    width: 70%;
    margin: auto;
-   font-size: 50px;
+   font-size: 40px;
  
 }
 .heroText span{
@@ -32,8 +32,8 @@
    padding-top: 20px;
 }
 .searchWrapper input {
-    width: 300px;
-    height: 40px;
+    width: 250px;
+    height: 35px;
     border-color: #360AFF;
     border-radius: 8px;
     background-image: url('../../Assets/microphone.png');
@@ -42,7 +42,7 @@
     padding-right: 40px; 
     position: relative;
     right: 25px;
-    z-index: -1;
+  
    
   }
   .searchInput::placeholder{

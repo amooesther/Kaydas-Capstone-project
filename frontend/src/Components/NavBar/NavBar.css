@@ -1,4 +1,4 @@
-/* Default styles */
+
 .navBar {
   display: flex;
   justify-content: space-around;
@@ -133,7 +133,7 @@ Link {
     display: block;
     cursor: pointer;
     padding: 10px;
-    position: relative; 
+    
   }
 
   .toggleButton span {
@@ -232,7 +232,7 @@ Link {
   .navMenu.active {
     display: flex;
   }
-
+  
   .toggleButton {
     display: block;
     cursor: pointer;
@@ -274,5 +274,26 @@ Link {
   .navLogo p {
     font-size: 22px;
   }
+
+  
 }
 
+@media only screen and (max-width: 480px) {
+  .toggleButton {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    position: relative; 
+    top: 15px;
+  }
+  
+  .newLoginCart button {
+    width: 57px;  
+    font-size: 15px;
+    position: absolute;
+   right: 20px;
+   top: 40px;
+   padding: 2px;
+   height: 30px;
+  }
+}
