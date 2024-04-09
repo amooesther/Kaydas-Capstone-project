@@ -8,11 +8,11 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   const [menu, setMenu] = useState('shop');
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false); 
 
   const handleLogout = () => {
-    setIsLoggedIn(true);
+    setIsLoggedIn(false);
   };
 
   const toggleMenu = () => {
