@@ -20,11 +20,11 @@ const Order = ({ orderItems }) => {
               
                 <div className='order'>
                 <h1>My Kaydas Account</h1>
-                    <div className='orderItems'>
+                <Link to="/myorderhistory" style={{ textDecoration: 'none' }}>    <div className='orderItems'>
                         <img src={order} alt="" />
                         <p>Order</p>
                         <img src={chevronRight} alt="" className='chevronRight' />
-                    </div>
+                    </div></Link>
                  <Link to="/profile" style={{ textDecoration: 'none' }}>  <div className='orderItems'>
                         <img src={orderProfile} alt="" />
                         <p>Profile</p>

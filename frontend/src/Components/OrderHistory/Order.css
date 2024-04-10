@@ -79,6 +79,57 @@
     height: 40px;
     border-radius: 10px;
 }
+.history{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.historyRight{
+    width: 810px;
+    height: auto;
+    background-color: #f6f5ff;
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+.historyInner span{
+    display: block;
+}
+.historyInner span:nth-child(2){
+    color: gray;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+.historyInner span:nth-child(3){
+    background-color: #328FE6;
+    width: 70px;
+    height: 20px;
+    padding-top: 7px;
+    padding-left: 5px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;    
+}
+.historyInner span:last-child{
+    color: gray;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+.orderHistories{
+    display: flex;
+    gap: 500px;
+}
+.orderHistories p{
+    color: #805b5b;
+    font-weight: 400;
+}
+ .hamburger-menu {
+    height: 30px;
+    width: 40px;
+    background-color: #f6f5ff;
+ }
 
 @media screen and (max-width: 768px) {
     .order {
@@ -143,3 +194,26 @@
     }
    
 }
+@media (max-width: 768px) {
+    .orderHistories {
+      width: 60%;
+      gap: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .historyRight {
+      width: 270px;
+    }
+  
+    .history {
+      gap: 1px;
+    }
+  
+    .profileOne {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 90% !important;
+    }
+  }
+  
