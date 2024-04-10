@@ -46,7 +46,10 @@
     display: block;
     padding: 1px;
   }
-  
+  .downs{
+    display: flex;
+    gap: 110px;
+  }
   .imgDown span:first-child {
     font-size: 10px;
     font-weight: 600;
@@ -55,7 +58,10 @@
   .imgDown span:nth-child(2) {
     color: #360aff;
   }
-  
+  .sellerImg{
+  margin-top: 30px;
+
+  }
   .imgDown span:last-child {
     font-size: 12px;
   }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button';
 import './BestSellers.css';
 import topDiscountImg4 from '../../Assets/topDiscountImg4.png';
+import chickens from '../../Assets/chickens.png'
 import Ratings from '../Ratings/Ratings';
 
 const BestSellers = () => {
@@ -10,11 +11,11 @@ const BestSellers = () => {
     {
       name: 'Drumsticks',
       price: 'NGN4,500',
-      rating: 4, // Example rating value
+      rating: 4, 
       reviews: '40+ Reviews',
       image: topDiscountImg4,
     },
-    // Add more items as needed
+   
   ];
 
   useEffect(() => {
@@ -42,10 +43,11 @@ const BestSellers = () => {
         {[...Array(3)].map((_, index) => (
           <div key={index} className='bestImg'>
             <div className='image'>
-              <div>image</div>
+              <div className='sellerImg'> <img src={chickens} alt="" /></div>
             </div>
             <div className='imgDown'>
-              <div>
+              <div className='downs'>
+              <div >
                 <span>{items[activeIndex].name}</span>
                 <span>{items[activeIndex].price}</span>
                 <span>
@@ -55,6 +57,7 @@ const BestSellers = () => {
               <div>
                 <img src={items[activeIndex].image} alt={items[activeIndex].name} />
               </div>
+            </div>
             </div>
           </div>
         ))}
