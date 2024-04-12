@@ -48,10 +48,16 @@ margin-bottom: 50px;
     border: 0.1px solid #aaa8a8; 
     margin-left: 20px;
     margin-top: 10px;
+    padding: 5px;
 }
 .itemCard span{
     font-size: 8px;
     font-weight: 300;
+}
+.itemCard p{ 
+    font-size: 12px;
+    color: #360AFF;
+    font-weight: 500;
 }
 .btnWrapper{
     display: flex;

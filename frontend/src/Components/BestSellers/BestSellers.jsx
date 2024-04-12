@@ -2,36 +2,29 @@ import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button';
 import './BestSellers.css';
 import topDiscountImg4 from '../../Assets/topDiscountImg4.png';
-import chickens from '../../Assets/chickens.png'
+import chickens from '../../Assets/chickens.png';
 import Ratings from '../Ratings/Ratings';
+import { fetchBestSeller } from '../../ApiRequests/BestSeller';
 
 const BestSellers = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const items = [
-    {
-      name: 'Drumsticks',
-      price: 'NGN4,500',
-      rating: 4, 
-      reviews: '40+ Reviews',
-      image: topDiscountImg4,
-    },
-   
-  ];
+  const [bestSellers, setBestSellers] = useState([]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [items.length]);
+    const fetchData = async () => {
+      try {
+        const data = await fetchBestSeller();
+        if (data && data.seller && Array.isArray(data.seller)) {
+          setBestSellers(data.seller);
+        } else {
+          console.error("Data is not in the expected format:", data);
+        }
+      } catch (error) {
+        console.error("Error fetching best sellers:", error);
+      }
+    };
 
-  const handlePrev = () => {
-    setActiveIndex((prevIndex) => (prevIndex - 1 + items.length) % items.length);
-  };
-
-  const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % items.length);
-  };
+    fetchData();
+  }, []);
 
   return (
     <div className='wrap'>
@@ -40,31 +33,27 @@ const BestSellers = () => {
         <Button>Shop Now</Button>
       </div>
       <div className='bestWrap'>
-        {[...Array(3)].map((_, index) => (
+        {bestSellers.map((seller, index) => (
           <div key={index} className='bestImg'>
             <div className='image'>
-              <div className='sellerImg'> <img src={chickens} alt="" /></div>
+              <div > <img src={seller.imgSrc} alt={seller.name} className='sellerImg' /></div>
             </div>
             <div className='imgDown'>
               <div className='downs'>
-              <div >
-                <span>{items[activeIndex].name}</span>
-                <span>{items[activeIndex].price}</span>
-                <span>
-                  <Ratings rating={items[activeIndex].rating} /> {items[activeIndex].reviews}
-                </span>
+                <div>
+                  <span>{seller.name}</span>
+                  <span>{seller.currentPrice}</span>
+                  <span>
+                    <Ratings /> {seller.reviews} reviews
+                  </span>
+                </div>
+                <div>
+                  <img src={topDiscountImg4} alt='' />
+                </div>
               </div>
-              <div>
-                <img src={items[activeIndex].image} alt={items[activeIndex].name} />
-              </div>
-            </div>
             </div>
           </div>
         ))}
-      </div>
-      <div className='chevrons'>
-        <button className='chevron-left' onClick={handlePrev}>{'<'}</button>
-        <button className='chevron-right' onClick={handleNext}>{'>'}</button>
       </div>
     </div>
   );

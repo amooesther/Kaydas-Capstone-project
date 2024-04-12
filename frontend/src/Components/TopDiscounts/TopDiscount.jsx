@@ -1,17 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './TopDiscount.css';
-import topDiscountImg1 from '../../Assets/topDiscountImg1.png';
-import topDiscountImg2 from '../../Assets/topDiscountImg2.png';
-import topDiscountImg3 from '../../Assets/topDiscountImg3.png';
 import topDiscountImg4 from '../../Assets/topDiscountImg4.png';
+import { fetchTopDiscounts } from '../../ApiRequests/TopDiscounts';
 
-const TopDiscount = ({ discounts = [] }) => {
-  console.log(discounts, "this is the discounts");
+const TopDiscount = () => {
+  const [items, setItems] = useState([]);
 
-  const [items, setItems] = useState([
-    { name: 'Gizzards', currentPrice: 'N6000', oldPrice: 'N4500' },
-    
-  ]);
+  useEffect(() => {
+    const getDiscounts = async () => {
+      try {
+        const response = await fetchTopDiscounts();
+        if (response.error) {
+          throw new Error(response.error);
+        }
+        
+        const discounts = response.discount || [];
+        setItems(discounts);
+        console.log('These are the discounts:', discounts);
+      } catch (error) {
+        console.error('Error fetching discounts:', error);
+      }
+    };
+    getDiscounts();
+  }, []);
 
   return (
     <div>
@@ -23,71 +34,23 @@ const TopDiscount = ({ discounts = [] }) => {
         </div>
       </div>
       <div className='discounts'>
-        <div className='discountOne'>
-          <div className='discountTwo'>
-            <div>
-              <img src={topDiscountImg2} alt="" />
+        {items.map((item, index) => (
+          <div className='discountOne' key={index}>
+            <div className='discountTwo'>
+              <img src={item.imgrc} alt="" />
+            </div>
+            <div className='discountThree'>
+              <div className=''>
+                <span>{item.name}</span>
+                <span>  {item.oldPrice}</span>
+                <span>  {item.currentPrice}</span>
+              </div>
+              <div className='topDiscountFour'>
+                <img src={topDiscountImg4} alt="" />
+              </div>
             </div>
           </div>
-          <div className='discountThree'>
-            <div>
-              {items.map((item, index) => (
-                <div key={index}>
-                  <span>{item.name}</span>
-                  <span>{item.currentPrice}</span>
-                  <span>{item.oldPrice}</span>
-                </div>
-              ))}
-            </div>
-            <div className='topDiscountFour'>
-              <img src={topDiscountImg4} alt="" />
-            </div>
-          </div>
-        </div>
-        
-        <div className='discountOne'>
-          <div className='discountTwo'>
-            <div>
-              <img src={topDiscountImg3} alt="" />
-            </div>
-          </div>
-          <div className='discountThree'>
-            <div>
-              {items.map((item, index) => (
-                <div key={index}>
-                  <span>{item.name}</span>
-                  <span>{item.currentPrice}</span>
-                  <span>{item.oldPrice}</span>
-                </div>
-              ))}
-            </div>
-            <div className='topDiscountFour'>
-              <img src={topDiscountImg4} alt="" />
-            </div>
-          </div>
-        </div>
-        <div className='discountOne'>
-          <div className='discountTwo'>
-            <div>
-              <img src={topDiscountImg1} alt="" />
-            </div>
-          </div>
-          <div className='discountThree'>
-            <div>
-              {items.map((item, index) => (
-                <div key={index}>
-                  <span>{item.name}</span>
-                  <span>{item.currentPrice}</span>
-                  <span>{item.oldPrice}</span>
-                </div>
-              ))}
-            </div>
-            <div className='topDiscountFour'>
-              <img src={topDiscountImg4} alt="" />
-            </div>
-          </div>
-        </div>
-        
+        ))}
       </div>
     </div>
   );

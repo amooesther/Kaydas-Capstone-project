@@ -1,64 +1,81 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button.jsx';
-import './ChickenItems.css'
+import './ChickenItems.css';
 import itemImg1 from '../../Assets/ItemImg1.png';
-import { Link } from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
+import { fetchChicken } from '../../ApiRequests/chicken.js'; // Import the fetchChicken function
 
 const Chicken = () => {
-    const [savedItems, setSavedItems] = useState([
-        {
-          id: 1,
-          itemImg: itemImg1,
-          title: 'Natundo',
-          weight: '20kg',
-          description: 'stone cold',
-          itemType: 'Broiler',
-          price: '60,000',
-        },
-        
-      ]);
+    const [chickenItems, setChickenItems] = useState([]);
 
-      const repeatItemWrap = () => {
-        return [...Array(4)].map((_, index) => (
-          <div key={index} className='itemWrap'>
-            
-            <img src={itemImg1} alt="" />
-            <div>
-              <h3>Natundo</h3>
-              <div className='itemOne'>
-                <div>20kg</div>
-                <div>stone cold</div>
-              </div>
-              <div className='itemCard'>
+    useEffect(() => {
+        const fetchChickenItems = async () => {
+            try {
+                const data = await fetchChicken(); // Use the fetchChicken function
+                if (data && data.chicken && Array.isArray(data.chicken)) {
+                    setChickenItems(data.chicken);
+                } else {
+                    console.error("fetchChicken did not return the expected data format:", data);
+                }
+            } catch (error) {
+                console.error("Error fetching chicken:", error);
+            }
+        };
+
+        fetchChickenItems();
+    }, []);
+
+    const renderChickenItems = () => {
+        if (!Array.isArray(chickenItems) || chickenItems.length === 0) {
+            return <p>No chicken items available</p>;
+        }
+
+        return chickenItems.map((item) => (
+            <div key={item.id} className='itemWrap'>
+                <img src={item.imgrc} alt={item.name} className='itemImg'/>
                 <div>
-                  <p>Broiler</p>
-                  <span>type</span>
+                    <h3>{item.name}</h3>
+                    <div className='itemOne'>
+                        <div>Weight</div>
+                        <div>20kg</div>
+                    </div>
+                    <div className='itemCard'>
+                        <div>
+                            <p>{item.type}</p>
+                            <span>Type</span>
+                        </div>
+                        <div>
+                            <p>{item.price}</p>
+                            <span>Price</span>
+                        </div>
+                    </div>
+                    <div className='btnWrapper'>
+                        <Link to={`/description/${item.id}`}>
+                            <div>
+                                <Button variant='tertiaryOne' size='small'>
+                                    View details
+                                </Button>
+                            </div>
+                        </Link>
+                        <div>
+                            <Button variant='tertiaryTwo' size='small'>
+                                Add to cart
+                            </Button>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <p>60,000</p>
-                  <span>price</span>
-                </div>
-              </div>
-              <div className='btnWrapper'>
-               <Link to='/description'> <div><Button variant='tertiaryOne' size='small'>View details</Button></div></Link>
-                <div><Button variant='tertiaryTwo' size='small'>Add to cart</Button></div>
-              </div>
             </div>
-          </div>
         ));
-      };
-  return (
-    <div>
-        <div className='cartCards'>
-      <h2>Chicken </h2>
-      <div className='itemWrapper'>
-        
-        {repeatItemWrap()}
-      </div>
-      </div>
-    </div>
-  )
-}
+    };
+
+    return (
+        <div>
+            <div className='cartCards'>
+                <h2>Chicken</h2>
+                <div className='itemWrapper'>{renderChickenItems()}</div>
+            </div>
+        </div>
+    );
+};
 
 export default Chicken;

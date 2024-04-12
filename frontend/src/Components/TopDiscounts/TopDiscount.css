@@ -59,6 +59,11 @@
 }
 .discountThree span:last-child{
     color: #9080D9;
+    font-weight: 600;
+   
+}
+.discountThree span:nth-child(2){
+  text-decoration: line-through;
 }
 .discountThree span:first-child{
     font-size: 10px;
@@ -127,7 +132,11 @@
     width: 90%;
     margin: 50px auto;
   }
-  
+  .discountTwo img{
+    width: 250px;
+    height: 200px;
+    border: 3px solid #805B5B;
+  }
   .discountThree {
     display: flex;
   }
