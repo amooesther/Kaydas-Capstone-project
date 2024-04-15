@@ -12,7 +12,7 @@ const Login = () => {
   const [errors, setErrors] = useState({});
   
   const handleInput = (event) => {
-    const { id, value } = event.target; // Use 'id' instead of 'name'
+    const { id, value } = event.target; 
     setValue((prev) => ({ ...prev, [id]: value }));
   };
 

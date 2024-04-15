@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button.jsx';
 import './ChickenWhole.css';
-import itemImg1 from '../../Assets/ItemImg1.png';
 import { Link } from 'react-router-dom';
 import { fetchWhole } from '../../ApiRequests/whole.js';
 
@@ -11,7 +10,7 @@ const ChickenWhole = () => {
   useEffect(() => {
     const fetchWholeItems = async () => {
       try {
-        const data = await fetchWhole(); // Use the fetchWhole function
+        const data = await fetchWhole(); 
         if (data && data.whole && Array.isArray(data.whole)) {
           setWholeItems(data.whole);
         } else {

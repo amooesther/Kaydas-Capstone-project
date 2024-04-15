@@ -8,6 +8,7 @@
     width: 400px;
     background-color: #f6f5ff;
     margin: 30px;
+    height: auto;
   
    
 }
@@ -85,7 +86,8 @@ margin-left: 30px;
     border: 1px solid #805B5B;
     color: #805B5B;
     border-radius: 50%;
-    width: 18px;
+    width: 25px;
+    height: 25px;
     padding: 5px;
     text-align: center;
     background-color: white;
@@ -153,7 +155,16 @@ margin-left: 30px;
     outline: none;
     border: none;
 }
-
+.cartBtn{
+    width: 159px;
+    padding: 10px;
+    background-color: #360AFF;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+}
 @media only screen and (max-width: 768px) {
     .description {
         flex-direction: column;

@@ -5,12 +5,16 @@ import cardImg from '../../Assets/cardImg.png';
 import './Card.css';
 import Footer from '../../Components/footer/Footer.jsx'
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Card = () => {
   const [rememberCard, setRememberCard] = useState(false);
   const [cardNumber, setCardNumber] = useState('');
   const [validTill, setValidTill] = useState('');
   const [cvv, setCvv] = useState('');
+
+  const totalAmount = useSelector(state => state.cart.totalAmount);
+  console.log("Total Amount:", totalAmount); 
 
   useEffect(() => {
     const storedCardNumber = localStorage.getItem('cardNumber');
@@ -66,7 +70,7 @@ const Card = () => {
     <div>
       <NavBar />
       <div className='cardOne'>
-        <p><span>NGN</span> 30,600.00</p>
+        <p><span>NGN</span> {totalAmount}</p>
         <p>chiomamatthew@gmail.com</p>
       </div>
       <div className='cardTwo'>
@@ -119,7 +123,7 @@ const Card = () => {
         
       <img src={cardImg} alt="" className='img' />
       <div className='payButton'>
-   <Link to='/successpayment'  style={{ textDecoration: 'none' }}>    <button onClick={handlePayment}><span>Pay</span> <span>NGN</span> 30,600.00 </button></Link> 
+   <Link to='/successpayment'  style={{ textDecoration: 'none' }}>    <button onClick={handlePayment}><span>Pay</span> <span>NGN</span> {totalAmount} </button></Link> 
       </div>
       <div className='changePayment'>
         <h4>Change Payment Method</h4>

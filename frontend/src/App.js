@@ -20,9 +20,10 @@ import PaymentSuccess from './pages/PaymentSuccessful/PaymentSuccess.jsx'
 import Receipt from './pages/Receipt/Receipt.jsx';
 import MyOrders from './pages/MyOrders/MyOrders.jsx';
 import Profile from './pages/Profile/Profile.jsx';
-import NutritionalTip from './Components/NutritionalTip/NutritionalTip.jsx';
-import Order from './Components/OrderHistory/Order.jsx';
-import MyOrderHistory from './Components/OrderHistory/MyOrderHistory.jsx';
+import NutritionalTip from './Components/NutritionalTip/NutritionalTip.jsx';import MyOrderHistory from './Components/OrderHistory/MyOrderHistory.jsx';
+
+
+
 
 function App() {
   return (

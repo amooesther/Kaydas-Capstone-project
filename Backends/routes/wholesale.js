@@ -8,29 +8,29 @@ wholesaleRouter.get("/", (req, res) => {
 
 const wholesale = [
 {
-    id:1,
+    id:17,
     name:'Valentine',
     type: 'carton',
     price: "60000",   
     imgSrc: "https://media.istockphoto.com/id/599876836/photo/raw-chicken-legs.webp?b=1&s=170667a&w=0&k=20&c=WuoXqrCN77BVD5fkTpuvARyC6JE3AVD7gOLK0LjW-2M="
 },
 {
-    id:2,
+    id:18,
     name:'wings',
     type: 'carton',
     price: "55000",   
-    imgSrc: "https://media.istockphoto.com/id/489516996/photo/raw-chicken-wings-isolated-on-white-background.webp?b=1&s=170667a&w=0&k=20&c=1tPtBii0uTXrB7H7eQtSS1A95bINfm_ZhZB9fu1A2AU="
+    imgSrc: "https://media.istockphoto.com/id/1487436087/photo/chicken-thighs.webp?b=1&s=170667a&w=0&k=20&c=r96a6RDkPiPikGtdQ8Bkz7KykNM5Tqf9G1FEykoOGzI="
 },
 {
-    id:3,
+    id:19,
     name:'Chicken Fiesta',
     type: "carton",
     price: "44000",
-    imgSrc: "https://media.istockphoto.com/id/93456470/photo/two-raw-chicken-breast-on-white-backdrop.webp?b=1&s=170667a&w=0&k=20&c=wAOTKX0Vv_3d_Brat7SFC1ExMsyICnEO2zgQprWCfSU="
+    imgSrc: "https://media.istockphoto.com/id/182372395/photo/chicken-breasts-against-white-background.webp?b=1&s=170667a&w=0&k=20&c=uOB467YiPklm7yKN_96oNOVdbbakn8zI_Wk_gsdFg5k="
 
 },
 {
-    id:4,
+    id:20,
     name:'Tilapia fish',
     type: "carton",
     price: "45000",

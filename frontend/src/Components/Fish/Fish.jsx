@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button.jsx';
 import './Fish.css';
-import itemImg1 from '../../Assets/ItemImg1.png';
 import { Link } from 'react-router-dom';
 import { fetchFish } from '../../ApiRequests/fish.js';
 
@@ -11,7 +10,7 @@ const Fish = () => {
   useEffect(() => {
     const fetchFishItems = async () => {
       try {
-        const data = await fetchFish(); // Use the fetchFish function
+        const data = await fetchFish(); 
         if (data && data.fish && Array.isArray(data.fish)) {
           setFishItems(data.fish);
         } else {

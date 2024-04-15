@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux'; // Import useDispatch
 import NavBar from '../../Components/NavBar/NavBar.jsx';
 import arrowLeftBlue from '../../Assets/arrowLeftBlue.png';
 import heart from '../../Assets/heart.png';
@@ -7,21 +8,25 @@ import clock from '../../Assets/clock.png';
 import './Description.css';
 import Button from '../../Components/Button/Button.jsx';
 import Footer from '../../Components/footer/Footer.jsx';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { fetchDetails } from '../../ApiRequests/details.js';
+import { addToCart } from '../../pages/Cart/CartSlice.js'; // Import addToCart action
 
 const Description = () => {
   const { id: detailsId } = useParams();
-  const [details, setDetails] = useState(null); // Initialize as null until data is fetched
+  const [details, setDetails] = useState(null); 
   const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch(); 
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await fetchDetails(); // Fetch details from backend
+        const data = await fetchDetails(); 
         if (data && data.details) {
-          const product = data.details.find(item => item.id == detailsId); // Find the product with the matching ID
-          setDetails(product); // Update state with fetched product details
+          
+          const product = data.details.find(item => item.id == detailsId);
+          setDetails(product); 
         } else {
           console.error('Data format or details not found:', data);
         }
@@ -30,12 +35,22 @@ const Description = () => {
       }
     };
 
-    fetchData(); // Call fetchData function when component mounts
-  }, [detailsId]); // Fetch data whenever detailsId changes
+    fetchData(); 
+  }, [detailsId]); 
 
   const changeQuantity = ({ target: { value } }) => {
     setQuantity(value);
   };
+
+  const handleAddToCart = () => {
+    if (details) {
+      console.log( "i am adding to cart")
+      dispatch(addToCart({ ...details, quantity: parseInt(quantity, 10) }));
+      navigate('/cart');
+    }
+  
+  };
+  
 
   return (
     <div>
@@ -62,13 +77,17 @@ const Description = () => {
                 <span className='spanOne'>80% of people suggest this product</span>
                 <div className='descriptionLeftDown'>
                   <div>Quantity</div>
-                  <div className=' descriptionDown'>-</div>
+                  <button className=' descriptionDown' onClick={() => setQuantity(Math.max(1, quantity - 1))}>-</button>
                   <div  className=' descriptionDownOne'>{quantity}</div>
-                  <div className=' descriptionDown'>+</div>
+                  <button className=' descriptionDown' onClick={() => setQuantity(quantity + 1)}>+</button>
                 </div>
               </>
             )}
-            <Link to='/cart'><div className='descBtn'><Button>Add to Cart</Button></div></Link>  
+            <div className='descBtn'>
+      
+        <button onClick={handleAddToCart} className='cartBtn'>Add to Cart</button>
+      
+            </div>
           </div>
         </div>
         <div className='descriptionRight'>

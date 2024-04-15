@@ -10,7 +10,7 @@ const Wholesale = () => {
   useEffect(() => {
     const fetchWholesaleItems = async () => {
       try {
-        const data = await fetchWholesale(); // Use the fetchWholesale function
+        const data = await fetchWholesale(); 
         if (data && data.wholesale && Array.isArray(data.wholesale)) {
           setWholesaleItems(data.wholesale);
         } else {

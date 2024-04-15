@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button.jsx';
 import './ChickenItems.css';
-import itemImg1 from '../../Assets/ItemImg1.png';
 import { Link } from 'react-router-dom';
 import { fetchChickenPart } from '../../ApiRequests/chickenPart.js';
 
@@ -11,7 +10,7 @@ const ChickenItems = () => {
   useEffect(() => {
     const fetchChickenItems = async () => {
       try {
-        const data = await fetchChickenPart(); // Use the fetchChickenPart function
+        const data = await fetchChickenPart(); 
         if (data && data.chickenPart && Array.isArray(data.chickenPart)) {
           setChickenItems(data.chickenPart);
         } else {

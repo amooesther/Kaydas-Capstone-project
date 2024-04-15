@@ -1,79 +1,95 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import NavBar from '../../Components/NavBar/NavBar';
-import cartIcon from '../../Assets/cart.png';
-import itemImg1 from '../../Assets/ItemImg1.png';
 import Button from '../../Components/Button/Button.jsx';
 import './Cart.css';
+import cartIcon from '../../Assets/cart.png';
 import ChickenItems from '../../Components/Chicken/ChickenItems.jsx';
 import ChickenWhole from '../../Components/ChickenWhole/ChickenWhole.jsx';
-import Footer from '../../Components/footer/Footer.jsx'
+import Footer from '../../Components/footer/Footer.jsx';
 import Wholesale from '../../Components/Wholesale/Wholesale.jsx';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateTotalAmount } from '../Cart/CartSlice.js'; 
+import { useNavigate } from 'react-router-dom';
+
 const Cart = () => {
-  const [savedItems, setSavedItems] = useState([
-    {
-      id: 1,
-      itemImg: itemImg1,
-      title: 'Natundo',
-      weight: '20kg',
-      description: 'stone cold',
-      itemType: 'Broiler',
-      price: '60,000',
-    },
-    
-  ]);
+  const cartItems = useSelector(state => state.cart.cartItems);
+  const [totalAmount, setTotalAmount] = useState(0);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
+  const subtotal = useMemo(() => cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0), [cartItems]);
+  const deliveryFee = 1500;
 
-  const repeatItemWrap = () => {
-    return [...Array(5)].map((_, index) => (
-      <div key={index} className='itemWrap'>
-        
-        <img src={itemImg1} alt="" />
-        <div>
-          <h3>Natundo</h3>
-          <div className='itemOne'>
-            <div>20kg</div>
-            <div>stone cold</div>
-          </div>
-          <div className='itemCard'>
-            <div>
-              <p>Broiler</p>
-              <span>type</span>
-            </div>
-            <div>
-              <p>60,000</p>
-              <span>price</span>
-            </div>
-          </div>
-          <div className='btnWrapper'>
-            <div><Button variant='tertiaryOne' size='small'>View details</Button></div>
-            <div><Button variant='tertiaryTwo' size='small'>Add to cart</Button></div>
-          </div>
-        </div>
-      </div>
-    ));
+  useEffect(() => {
+    const newTotalAmount = subtotal + deliveryFee;
+    setTotalAmount(newTotalAmount);
+    dispatch(updateTotalAmount(newTotalAmount)); // Dispatch the action with the updated total amount
+  }, [subtotal, deliveryFee, dispatch]);
+
+  const handleCheckout = () => {
+    console.log(totalAmount); // Ensure that totalAmount is logged correctly before navigation
+    navigate('/payment', { state: { totalAmount } });
   };
 
   return (
     <div>
       <NavBar />
-      <div className='emptyCart'>
-        <div className='cartWrap'>
-          <div className='cartImg'><img src={cartIcon} alt="" /></div>
-          <div className='count'>0</div>
+      <div className='fullCartWrapper'>
+        <div className='cartDisplay'>
+          {cartItems && cartItems.length > 0 ? (
+            cartItems.map((item, index) => (
+              <div className='fullCart' key={index}>
+                <div className='fullCartImg'><img src={item.imgSrc} alt="" /></div>
+                <div className='fullCartSpan'>
+                  <span>{item.name}</span>
+                  <span>In stock</span>
+                </div>
+                <div className='fullCartRight'>
+                  <div>
+                    <p>{item.price}/kg</p>
+                  </div>
+                  <div className='fullCartBtnWrapper'>
+                    <button>+</button>
+                    <div>{item.quantity}</div>
+                    <button>-</button>
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className='emptyCart'>
+              <div className='cartWrap'>
+                <div className='cartImg'><img src={cartIcon} alt="" /></div>
+                <div className='count'>{cartItems ? cartItems.length : 0}</div>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className='cartSummary'>
+          <p>Cart Summary</p>
+          <div className='summary'>
+            <span>Subtotal</span>
+            <span>{subtotal}</span>
+          </div>
+          <div className='summary'>
+            <span>Delivery fee</span>
+            <span>{deliveryFee}</span>
+          </div>
+          <div className='summary'>
+            <span>Total</span>
+            <span>{totalAmount}</span>
+          </div>
+          <button onClick={handleCheckout}>Checkout</button>
         </div>
       </div>
-      
       <div className='cartCards'>
-      <h2>Saved Items</h2>
-      <div className='itemWrapper'>
-        
-        {repeatItemWrap()}
+        <div className='itemWrapper'>
+        </div>
       </div>
-      </div>
-      <ChickenItems/>
-      <ChickenWhole/>
-      <Wholesale/>
-      <Footer/>
+      <ChickenItems />
+      <ChickenWhole />
+      <Wholesale />
+      <Footer />
     </div>
   );
 };

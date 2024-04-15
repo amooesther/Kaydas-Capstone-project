@@ -8,21 +8,21 @@ wholeRouter.get("/", (req, res) => {
 
 const whole = [
 {
-    id:1,
+    id:13,
     name:'Zartech',
     type: 'Broiler',
     price: "3800",   
     imgSrc: "https://media.istockphoto.com/id/1282866808/photo/fresh-raw-chicken.webp?b=1&s=170667a&w=0&k=20&c=tVhkkolwq60QmPMQnDimXAeXyOmgKBuURTykgvFznwo="
 },
 {
-    id:2,
+    id:14,
     name:'Chicken Fiesta',
     type: 'Broiler',
     price: "3000",   
     imgSrc: "https://media.istockphoto.com/id/93456470/photo/two-raw-chicken-breast-on-white-backdrop.webp?b=1&s=170667a&w=0&k=20&c=wAOTKX0Vv_3d_Brat7SFC1ExMsyICnEO2zgQprWCfSU="
 },
 {
-    id:3,
+    id:15,
     name:'Natundo',
     type: "medium",
     price: "6000",
@@ -30,7 +30,7 @@ const whole = [
 
 },
 {
-    id:4,
+    id:16,
     name:'Valentine',
     type: "medium",
     price: "3500",
