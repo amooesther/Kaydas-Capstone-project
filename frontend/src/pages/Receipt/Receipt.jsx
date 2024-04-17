@@ -61,7 +61,7 @@ const Receipt = () => {
             </div>
             <div className='receiptTWo'>
               <p>AMOUNT PAID</p>
-              <p>N{totalAmount}</p> {/* Display the total amount */}
+              <p>N{totalAmount}</p> 
             </div>
             <button onClick={handleDownloadReceipt}>Download receipt</button>
           </div>

@@ -3,6 +3,8 @@ import search from '../../Assets/search.png';
 import heroImg1 from '../../Assets/heroImg1.png';
 import heroImg2 from '../../Assets/heroImg2.png';
 import heroImg3 from '../../Assets/heroImg3.png';
+import { Link } from 'react-router-dom';
+
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -35,7 +37,7 @@ const HeroSection = () => {
          />
 
            
-            <button type='submit' className='searchButton'>Search</button>
+        <Link to='/gallery'>   <button type='submit' className='searchButton'>Search</button></Link> 
           </form>
         </div>
       </div>
