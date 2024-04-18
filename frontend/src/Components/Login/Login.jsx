@@ -5,7 +5,7 @@ import NavBar from '../NavBar/NavBar';
 import loginImg1 from '../../Assets/loginImg1.png';
 import Footer from '../footer/Footer';
 import axios from 'axios';
-import './Login.css'; // Import CSS file
+import './Login.css'; 
 
 const Login = () => {
   const [value, setValue] = useState({ email: '', password: '' });
@@ -23,16 +23,16 @@ const Login = () => {
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
       try {
-        const response = await axios.post('http://localhost:3002/signup', {
+        const response = await axios.post('http://localhost:3002/login', {
           email: value.email,
           password: value.password,
         });
 
         if (response.status === 200) {
-          // Login successful
-          history('/'); // Redirect to home page or dashboard
+        
+          history('/');
         } else {
-          // Invalid credentials or other errors
+          
           alert(response.data.message);
         }
       } catch (error) {

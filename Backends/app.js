@@ -4,7 +4,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
-const mongoose = require('mongoose'); // Import mongoose
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -17,8 +16,7 @@ const wholeRouter = require('./routes/whole');
 const wholesaleRouter = require('./routes/wholesale');
 const detailsRouter = require('./routes/details');
 
-// Import User model
-const User = require('./routes/mongo'); 
+const collection = require('./routes/mongo'); // Import MongoDB collection here
 
 const app = express();
 
@@ -28,15 +26,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
-
-// Connect to MongoDB
-mongoose.connect('mongodb://0.0.0.0:27017/login', { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log('MongoDB connected successfully');
-  })
-  .catch((error) => {
-    console.error('MongoDB connection failed:', error);
-  });
 
 // Define routes
 app.use('/', indexRouter);
@@ -50,37 +39,42 @@ app.use('/whole', wholeRouter);
 app.use('/wholesale', wholesaleRouter);
 app.use('/details', detailsRouter);
 
-// POST route for login
-app.post("/login", async (req, res) => {
+// POST route for checking email existence
+app.post("/check-email", async (req, res) => {
   try {
-    const { email, password } = req.body;
-    const user = await User.findOne({ email });
-    if (!user) {
-      return res.status(401).json({ message: "User not found" });
-    }
-    // Compare hashed password with the provided password
-    if (user.password !== password) {
-      return res.status(401).json({ message: "Incorrect password" });
-    }
-    // Authentication successful
-    res.status(200).json({ message: "Login successful" });
-  } catch (error) {
-    console.error("Error during login:", error);
-    res.status(500).json({ message: "Internal server error" });
+    const { email } = req.body;
+    const check = await collection.findOne({ email });
+    res.json({ exists: !!check }); // Return true if user exists, false otherwise
+  } catch (e) {
+    res.status(500).json({ error: 'Server error' });
   }
 });
 
-// Handle 404 and forward to error handler
+// POST route for signup
+app.post("/signup", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const check = await collection.findOne({ email });
+    if (check) {
+      res.status(409).json({ error: 'User already exists' }); // HTTP status code 409 for conflict
+    } else {
+      await collection.insertOne({ email, password });
+      res.status(201).json({ message: 'User created successfully' }); // HTTP status code 201 for created
+    }
+  } catch (e) {
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// Handle 404
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
 // Error handler
 app.use(function(err, req, res, next) {
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
   res.status(err.status || 500);
-  res.render('error');
+  res.json({ error: err.message || 'Internal server error' });
 });
 
 module.exports = app;
