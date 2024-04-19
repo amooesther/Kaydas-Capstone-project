@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import NavBar from '../../Components/NavBar/NavBar';
 import card from '../../Assets/card.png';
 import cardImg from '../../Assets/cardImg.png';
@@ -6,15 +6,19 @@ import './Card.css';
 import Footer from '../../Components/footer/Footer.jsx'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { auth, db } from '../../Components/firebase.js';
+import { getDoc, doc } from 'firebase/firestore';
+
 
 const Card = () => {
   const [rememberCard, setRememberCard] = useState(false);
   const [cardNumber, setCardNumber] = useState('');
   const [validTill, setValidTill] = useState('');
   const [cvv, setCvv] = useState('');
+  const [userDetail, setUserDetail] = useState(null);
 
   const totalAmount = useSelector(state => state.cart.totalAmount);
-  console.log("Total Amount:", totalAmount); 
+  console.log("Total Amount:", totalAmount);
 
   useEffect(() => {
     const storedCardNumber = localStorage.getItem('cardNumber');
@@ -35,6 +39,29 @@ const Card = () => {
     setRememberCard(newValue);
     localStorage.setItem('rememberCard', JSON.stringify(newValue));
   };
+
+  const fetchUserData = async () => {
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        console.log(user);
+        const docRef = doc(db, "Users", user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setUserDetail(docSnap.data());
+          console.log(docSnap.data());
+        } else {
+          console.log("User data not found");
+        }
+      } else {
+        console.log("User not logged in");
+      }
+    });
+  };
+
+  useEffect(() => {
+    fetchUserData();
+  }, []);
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -57,12 +84,10 @@ const Card = () => {
   };
 
   const handlePayment = () => {
-    
     console.log('Payment processing...');
   };
 
   const handleCancelPayment = () => {
-    
     console.log('Payment cancelled');
   };
 
@@ -71,7 +96,9 @@ const Card = () => {
       <NavBar />
       <div className='cardOne'>
         <p><span>NGN</span> {totalAmount}</p>
-        <p>chiomamatthew@gmail.com</p>
+        {userDetail && (
+          <p>{userDetail.email}</p>
+        )}
       </div>
       <div className='cardTwo'>
         <div className='cardThree'>
@@ -120,16 +147,18 @@ const Card = () => {
           onChange={handleRememberToggle}
         />
       </div>
-        
+
       <img src={cardImg} alt="" className='img' />
       <div className='payButton'>
-   <Link to='/successpayment'  style={{ textDecoration: 'none' }}>    <button onClick={handlePayment}><span>Pay</span> <span>NGN</span> {totalAmount} </button></Link> 
+        <Link to='/successpayment' style={{ textDecoration: 'none' }}>
+          <button onClick={handlePayment}><span>Pay</span> <span>NGN</span> {totalAmount} </button>
+        </Link>
       </div>
       <div className='changePayment'>
         <h4>Change Payment Method</h4>
         <button onClick={handleCancelPayment}> X Cancel Payment</button>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

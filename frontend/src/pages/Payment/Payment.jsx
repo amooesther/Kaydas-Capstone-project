@@ -1,5 +1,4 @@
-
-import React from 'react';
+import { useState, useEffect } from 'react';
 import './Payment.css';
 import NavBar from '../../Components/NavBar/NavBar.jsx';
 import paystack from '../../Assets/paystack.png';
@@ -9,11 +8,37 @@ import USSD from '../../Assets/USSD.png';
 import Footer from '../../Components/footer/Footer.jsx';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { auth, db } from '../../Components/firebase.js';
+import { getDoc, doc } from 'firebase/firestore';
+
 
 const Payment = () => {
-  const totalAmount = useSelector(state => state.cart.totalAmount);
-  console.log("Total Amount:", totalAmount); 
+  const [userDetail, setUserDetail] = useState(null);
 
+  const totalAmount = useSelector(state => state.cart.totalAmount);
+  console.log("Total Amount:", totalAmount);
+
+  const fetchUserData = async () => {
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        console.log(user);
+        const docRef = doc(db, "Users", user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setUserDetail(docSnap.data());
+          console.log(docSnap.data());
+        } else {
+          console.log("User data not found");
+        }
+      } else {
+        console.log("User not logged in");
+      }
+    });
+  };
+
+  useEffect(() => {
+    fetchUserData();
+  }, []);
 
 
   return (
@@ -31,7 +56,9 @@ const Payment = () => {
           <div className='payStackWrapTwo'>
             <p>Close Payment</p>
             <p> <span>NGN</span> {totalAmount}</p>
-            <p>chiomamatthew@gmail.com</p>
+            {userDetail && (
+              <p>{userDetail.email}</p>
+            )}
           </div>
         </div>
       </div>

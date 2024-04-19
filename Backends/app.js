@@ -16,7 +16,6 @@ const wholeRouter = require('./routes/whole');
 const wholesaleRouter = require('./routes/wholesale');
 const detailsRouter = require('./routes/details');
 
-const collection = require('./routes/mongo'); // Import MongoDB collection here
 
 const app = express();
 
@@ -39,32 +38,6 @@ app.use('/whole', wholeRouter);
 app.use('/wholesale', wholesaleRouter);
 app.use('/details', detailsRouter);
 
-// POST route for checking email existence
-app.post("/check-email", async (req, res) => {
-  try {
-    const { email } = req.body;
-    const check = await collection.findOne({ email });
-    res.json({ exists: !!check }); // Return true if user exists, false otherwise
-  } catch (e) {
-    res.status(500).json({ error: 'Server error' });
-  }
-});
-
-// POST route for signup
-app.post("/signup", async (req, res) => {
-  try {
-    const { email, password } = req.body;
-    const check = await collection.findOne({ email });
-    if (check) {
-      res.status(409).json({ error: 'User already exists' }); // HTTP status code 409 for conflict
-    } else {
-      await collection.insertOne({ email, password });
-      res.status(201).json({ message: 'User created successfully' }); // HTTP status code 201 for created
-    }
-  } catch (e) {
-    res.status(500).json({ error: 'Server error' });
-  }
-});
 
 // Handle 404
 app.use(function(req, res, next) {

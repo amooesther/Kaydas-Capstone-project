@@ -1,19 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './NavBar.css';
 import logo from '../../Assets/logo.png';
 import cart from '../../Assets/cart.png';
 import heart from '../../Assets/heart.png';
 import userAvatar from '../../Assets/userAvatar.png';
 import { Link } from 'react-router-dom';
+import { auth, db } from '../firebase';
+import { getDoc, doc } from 'firebase/firestore';
 
 const NavBar = () => {
-  const [menu, setMenu] = useState('shop');
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [userDetail, setUserDetail] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [menuVisible, setMenuVisible] = useState(false); 
+  const fetchUserData = async () => {
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        console.log(user);
+        const docRef = doc(db, "Users", user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setUserDetail(docSnap.data());
+          console.log(docSnap.data());
+        } else {
+          console.log("User data not found");
+        }
+      } else {
+        console.log("User not logged in");
+      }
+    });
+  };
+
+  useEffect(() => {
+    fetchUserData();
+  }, []);
+
 
   const handleLogout = () => {
-    setIsLoggedIn(false);
+    auth.signOut().then(() => {
+      setUserDetail(null); 
+      window.location.href="/login"
+    }).catch((error) => {
+      console.error("Error logging out:", error);
+    });
   };
+
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
@@ -24,36 +54,33 @@ const NavBar = () => {
       <div className='navLogo'>
         <img src={logo} alt='Logo' />
       </div>
-     
       <div className='toggleButton' onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
       </div>
-     
       <ul className={`navMenu ${menuVisible ? 'active' : ''}`}>
-        <li onClick={() => setMenu('Home')}>
+        <li>
           <Link style={{ textDecoration: 'none' }} to='/'>
             Home
           </Link>
         </li>
-        <li onClick={() => setMenu('aboutUs')}>
+        <li>
           <Link style={{ textDecoration: 'none' }} to='/aboutUs'>
             About Us
           </Link>
         </li>
-        <li onClick={() => setMenu('contactUS')}>
+        <li>
           <Link style={{ textDecoration: 'none' }} to='/contactUS'>
             Contact US
           </Link>
         </li>
-        <li onClick={() => setMenu('subscription')}>
+        <li>
           <Link style={{ textDecoration: 'none' }} to='/subscription'>
             Subscription
           </Link>
         </li>
       </ul>
-     
       <div className='newLoginCart'>
         <Link to='/myorders'>
           <img src={heart} alt='cart' />
@@ -63,17 +90,16 @@ const NavBar = () => {
           <img src={cart} alt='cart' />
         </Link>
         <div className='cartCount'>0</div>
-
-        {isLoggedIn ? (
+        {userDetail ? (
           <div className='user'>
             <div className='userAvatar'>
               <img src={userAvatar} alt='' />
             </div>
-            <button onClick={handleLogout}>Hi Keno</button>
+            <button onClick={handleLogout}>Hi {userDetail.Name}</button>
           </div>
         ) : (
           <Link to='./Login'>
-            <button className='loginBtn'>Login</button>
+            <button  className='loginBtn'>Login</button>
           </Link>
         )}
       </div>
