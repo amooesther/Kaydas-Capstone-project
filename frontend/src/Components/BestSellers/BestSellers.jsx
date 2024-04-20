@@ -5,6 +5,7 @@ import topDiscountImg4 from '../../Assets/topDiscountImg4.png';
 import chickens from '../../Assets/chickens.png';
 import Ratings from '../Ratings/Ratings';
 import { fetchBestSeller } from '../../ApiRequests/BestSeller';
+import { Link } from 'react-router-dom';
 
 const BestSellers = () => {
   const [bestSellers, setBestSellers] = useState([]);
@@ -30,7 +31,7 @@ const BestSellers = () => {
     <div className='wrap'>
       <div className="bestTop">
         <h2>Best Sellers</h2>
-        <Button>Shop Now</Button>
+      <Link to='/gallery'>  <Button>Shop Now</Button></Link>
       </div>
       <div className='bestWrap'>
         {bestSellers.map((seller, index) => (
