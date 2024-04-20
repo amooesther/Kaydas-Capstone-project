@@ -111,7 +111,10 @@ Link {
   margin-left: 4px;
   margin-top: 2px;
 }
-
+.userBtn{
+font-size:14px !important;
+width: auto !important;
+}
 /* Responsive styles */
 @media only screen and (max-width: 1024px) {
   .navMenu {

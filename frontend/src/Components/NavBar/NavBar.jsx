@@ -95,7 +95,7 @@ const NavBar = () => {
             <div className='userAvatar'>
               <img src={userAvatar} alt='' />
             </div>
-            <button onClick={handleLogout}>Hi {userDetail.Name}</button>
+            <button onClick={handleLogout} className='userBtn'>Hi {userDetail.Name}</button>
           </div>
         ) : (
           <Link to='./Login'>
