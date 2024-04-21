@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../Button/Button.jsx';
 import './ChickenItems.css';
-import itemImg1 from '../../Assets/ItemImg1.png';
 import { Link } from 'react-router-dom';
 import { fetchChicken } from '../../ApiRequests/chicken.js'; // Import the fetchChicken function
 

@@ -7,11 +7,16 @@ import userAvatar from '../../Assets/userAvatar.png';
 import { Link } from 'react-router-dom';
 import { auth, db } from '../firebase';
 import { getDoc, doc } from 'firebase/firestore';
+import { useSelector } from 'react-redux'; // Import useSelector to access Redux store state
 
 const NavBar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [userDetail, setUserDetail] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Get cart count from Redux store
+  const cartCount = useSelector((state) => state.cart.cartItems.length);
+
   const fetchUserData = async () => {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
@@ -34,7 +39,6 @@ const NavBar = () => {
     fetchUserData();
   }, []);
 
-
   const handleLogout = () => {
     auth.signOut().then(() => {
       setUserDetail(null); 
@@ -43,7 +47,6 @@ const NavBar = () => {
       console.error("Error logging out:", error);
     });
   };
-
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
@@ -85,11 +88,11 @@ const NavBar = () => {
         <Link to='/myorders'>
           <img src={heart} alt='cart' />
         </Link>
-        <div className='cartCount'>0</div>
+        <div className='cartCount'>{cartCount}</div> {/* Display cart count */}
         <Link to='./cart'>
           <img src={cart} alt='cart' />
         </Link>
-        <div className='cartCount'>0</div>
+        <div className='cartCount'>{cartCount}</div> {/* Display cart count */}
         {userDetail ? (
           <div className='user'>
             <div className='userAvatar'>

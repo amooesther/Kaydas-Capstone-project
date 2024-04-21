@@ -162,10 +162,15 @@ width: auto !important;
 
   .newLoginCart img,
   .cartCount,
-  .userAvatar,
-  .user button {
+  .userAvatar
+   {
     display: none;
   }
+  .userBtn{
+    display: block;
+      }
+    
+  
 }
 
 @media only screen and (max-width: 768px) {
@@ -214,9 +219,12 @@ width: auto !important;
 
   .newLoginCart img,
   .cartCount,
-  .userAvatar,
-  .user button {
+  .userAvatar
+  {
     display: none;
+  }
+  .userBtn{
+display: block;
   }
 }
 
@@ -299,4 +307,8 @@ width: auto !important;
    padding: 2px;
    height: 30px;
   }
+  .userBtn{
+    display: block;
+      }
+    
 }

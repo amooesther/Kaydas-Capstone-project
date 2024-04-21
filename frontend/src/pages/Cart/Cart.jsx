@@ -1,6 +1,6 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import NavBar from '../../Components/NavBar/NavBar';
-import Button from '../../Components/Button/Button.jsx';
+import trash from '../../Assets/trash.png';
 import './Cart.css';
 import cartIcon from '../../Assets/cart.png';
 import ChickenItems from '../../Components/Chicken/ChickenItems.jsx';
@@ -8,7 +8,7 @@ import ChickenWhole from '../../Components/ChickenWhole/ChickenWhole.jsx';
 import Footer from '../../Components/footer/Footer.jsx';
 import Wholesale from '../../Components/Wholesale/Wholesale.jsx';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateTotalAmount } from '../Cart/CartSlice.js'; 
+import { updateTotalAmount, removeItem, incrementQuantity, decrementQuantity } from '../Cart/CartSlice.js'; // Import actions from CartSlice
 import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
@@ -23,12 +23,27 @@ const Cart = () => {
   useEffect(() => {
     const newTotalAmount = subtotal + deliveryFee;
     setTotalAmount(newTotalAmount);
-    dispatch(updateTotalAmount(newTotalAmount)); // Dispatch the action with the updated total amount
+    dispatch(updateTotalAmount(newTotalAmount)); 
   }, [subtotal, deliveryFee, dispatch]);
 
   const handleCheckout = () => {
-    console.log(totalAmount); // Ensure that totalAmount is logged correctly before navigation
+    console.log(totalAmount); 
     navigate('/payment', { state: { totalAmount } });
+  };
+
+  // Function to remove an item from the cart
+  const removeCartItem = (itemId) => {
+    dispatch(removeItem({ itemId }));
+  };
+
+  // Function to increment quantity
+  const incrementItem = (itemId) => {
+    dispatch(incrementQuantity({ itemId }));
+  };
+
+  // Function to decrement quantity
+  const decrementItem = (itemId) => {
+    dispatch(decrementQuantity({ itemId }));
   };
 
   return (
@@ -43,15 +58,19 @@ const Cart = () => {
                 <div className='fullCartSpan'>
                   <span>{item.name}</span>
                   <span>In stock</span>
+                  <div className='trash'>
+                  <img src={trash} alt="" /> 
+                    <button onClick={() => removeCartItem(item.id)} className='trashBtn'> Remove</button>    
+                  </div>
                 </div>
                 <div className='fullCartRight'>
                   <div>
                     <p>{item.price}/kg</p>
                   </div>
                   <div className='fullCartBtnWrapper'>
-                    <button>+</button>
+                    <button onClick={() => decrementItem(item.id)}>-</button>
                     <div>{item.quantity}</div>
-                    <button>-</button>
+                    <button onClick={() => incrementItem(item.id)}>+</button>
                   </div>
                 </div>
               </div>
@@ -79,7 +98,7 @@ const Cart = () => {
             <span>Total</span>
             <span>{totalAmount}</span>
           </div>
-          <button onClick={handleCheckout}>Checkout</button>
+          <button onClick={handleCheckout} className='checkOutBtn'>Checkout</button>
         </div>
       </div>
       <div className='cartCards'>
